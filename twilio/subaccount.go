@@ -26,7 +26,7 @@ func NewTwilioRawConnector() connectors.Connector {
 }
 
 func (c TwilioRawConnector) Id() string {
-	return "hsdp:twilio"
+	return "hsdp:twilio-subaccount"
 }
 func (c TwilioRawConnector) Name() string {
 	return ".*twilio.*"
