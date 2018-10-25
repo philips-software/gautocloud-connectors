@@ -7,7 +7,7 @@ import (
 )
 
 func init() {
-	gautocloud.RegisterConnector(NewTwilioRawConnector())
+	gautocloud.RegisterConnector(NewTwilioClientConnector())
 }
 
 type TwilioCientConnector struct {
