@@ -9,12 +9,12 @@ func init() {
 	gautocloud.RegisterConnector(NewTwilioRawConnector())
 }
 
-type TwilioSchema struct {
+type Schema struct {
 	TwilioAuthToken string `cloud:"twilio_auth_token"`
 	TwilioSID       string `cloud:"twilio_sid"`
 }
 
-type TwilioSubAccount struct {
+type SubAccount struct {
 	SID       string
 	AuthToken string
 }
@@ -35,13 +35,13 @@ func (c TwilioRawConnector) Tags() []string {
 	return []string{"twilio.*"}
 }
 func (c TwilioRawConnector) Load(schema interface{}) (interface{}, error) {
-	fSchema := schema.(TwilioSchema)
-	return TwilioSubAccount{
+	fSchema := schema.(Schema)
+	return SubAccount{
 		SID:       fSchema.TwilioSID,
 		AuthToken: fSchema.TwilioAuthToken,
 	}, nil
 }
 
 func (c TwilioRawConnector) Schema() interface{} {
-	return TwilioSchema{}
+	return Schema{}
 }
