@@ -46,7 +46,7 @@ func (c DynamoDBCientConnector) Load(schema interface{}) (interface{}, error) {
 	if err != nil {
 		return nil, err
 	}
-	fSchema := schema.(*DynamoDBSchema)
+	fSchema := schema.(DynamoDBSchema)
 
 	sess, err := session.NewSession(&aws.Config{
 		Region:      aws.String(fSchema.AWSRegion),
