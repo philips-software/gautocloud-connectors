@@ -65,14 +65,14 @@ import (
 
 ```go
 db, err := gautocloud.GetFirst("hsdp:dynamodb-client")
-service, ok := db.(*hsdp.DynamoDBClient)
+client, ok := db.(*hsdp.DynamoDBClient)
 if ok {
         fmt.Printf("Loaded DynamoDB client, table: %s\n", service.TableName)
         req := &dynamodb.DescribeTableInput{
                 TableName: aws.String(service.TableName),
         }
         // Fetches and display details of the DynamoDB table
-        result, err := service.DescribeTable(req)
+        result, err := client.DescribeTable(req)
         if err != nil {
                 fmt.Printf("%s", err)
         }
