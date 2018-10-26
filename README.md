@@ -1,10 +1,10 @@
 # gautocloud connector for HSDP CF services
 This repository contains [gautocloud connectors](https://github.com/cloudfoundry-community/gautocloud) for select HSDP Cloudfoundry services. At this time the following connectors are supported:
 
-- Twilio Raw
-- Twilio Go client
+- [Twilio Raw](#twilio-raw)
+- [Twilio Go client](#twilio-go-client)
 - DynamoDB Raw
-- DynamoDB client
+- [DynamoDB client](#dynamodb-client)
 
 # usage
 
@@ -14,9 +14,8 @@ import (
     "gitub.com/hsdp/gautocloud-connectors/hsdp"
 )
 ```
-## Twilio
+## Twilio Raw
 
-### Raw
 ```go
 svc, err := gautocloud.GetFirst("hsdp:twilio-raw")
 if err == nil {
@@ -26,7 +25,8 @@ if err == nil {
     }
 }
 ```
-### Twilio-go client
+
+## Twilio Go client
 
 ```go
 import (
@@ -52,9 +52,7 @@ if err == nil {
 }
 ```
 
-## DynamoDB
-
-### client
+## DynamoDB client
 
 ```go
 import (
