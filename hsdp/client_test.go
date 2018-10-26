@@ -2,7 +2,7 @@ package hsdp_test
 
 import (
 	"github.com/cloudfoundry-community/gautocloud/connectors"
-	. "github.com/loafoe/gautocloud-connectors/hsdp"
+	. "github.com/hsdp/gautocloud-connectors/hsdp"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -1,4 +1,4 @@
-module github.com/loafoe/gautocloud-connectors
+module github.com/hsdp/gautocloud-connectors
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
