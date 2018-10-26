@@ -10,6 +10,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
 
 ```go
 import (
+    "github.com/cloudfoundry-community/gautocloud"
     "gitub.com/loafoe/gautocloud-connectors/hsdp"
 )
 ```
@@ -52,6 +53,15 @@ if err == nil {
 ```
 
 ## DynamoDB
+
+### client
+
+```go
+import (
+    "github.com/aws/aws-sdk-go/aws"
+    "github.com/aws/aws-sdk-go/service/dynamodb"
+)
+```
 
 ```go
 db, err := gautocloud.GetFirst("hsdp:dynamodb-client")
