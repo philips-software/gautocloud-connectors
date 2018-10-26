@@ -36,7 +36,7 @@ func (c TwilioRawConnector) Tags() []string {
 }
 func (c TwilioRawConnector) Load(schema interface{}) (interface{}, error) {
 	fSchema := schema.(TwilioSchema)
-	return &TwilioSubAccount{
+	return TwilioSubAccount{
 		SID:       fSchema.TwilioSID,
 		AuthToken: fSchema.TwilioAuthToken,
 	}, nil

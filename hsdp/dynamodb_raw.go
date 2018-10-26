@@ -33,7 +33,7 @@ func (c DynamoDBRawConnector) Tags() []string {
 }
 func (c DynamoDBRawConnector) Load(schema interface{}) (interface{}, error) {
 	fSchema := schema.(DynamoDBSchema)
-	return &fSchema, nil
+	return fSchema, nil
 }
 
 func (c DynamoDBRawConnector) Schema() interface{} {
