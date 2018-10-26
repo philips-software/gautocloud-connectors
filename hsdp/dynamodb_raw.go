@@ -1,4 +1,4 @@
-package dynamodb
+package hsdp
 
 import (
 	"github.com/cloudfoundry-community/gautocloud"
@@ -9,7 +9,7 @@ func init() {
 	gautocloud.RegisterConnector(NewDynamoDBRawConnector())
 }
 
-type Schema struct {
+type DynamoDBSchema struct {
 	AWSKey    string `cloud:"aws_key"`
 	AWSRegion string `cloud:"aws_region"`
 	AWSSecret string `cloud:"aws_secret"`
@@ -32,10 +32,10 @@ func (c DynamoDBRawConnector) Tags() []string {
 	return []string{"DynamoDB.*"}
 }
 func (c DynamoDBRawConnector) Load(schema interface{}) (interface{}, error) {
-	fSchema := schema.(Schema)
+	fSchema := schema.(DynamoDBSchema)
 	return &fSchema, nil
 }
 
 func (c DynamoDBRawConnector) Schema() interface{} {
-	return Schema{}
+	return DynamoDBSchema{}
 }

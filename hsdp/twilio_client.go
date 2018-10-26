@@ -1,9 +1,9 @@
-package twilio
+package hsdp
 
 import (
 	"github.com/cloudfoundry-community/gautocloud"
 	"github.com/cloudfoundry-community/gautocloud/connectors"
-	tg "github.com/kevinburke/twilio-go"
+	"github.com/kevinburke/twilio-go"
 )
 
 func init() {
@@ -34,8 +34,8 @@ func (c TwilioCientConnector) Load(schema interface{}) (interface{}, error) {
 	if err != nil {
 		return nil, err
 	}
-	fSchema := schema.(*SubAccount)
-	client := tg.NewClient(fSchema.SID, fSchema.AuthToken, nil)
+	fSchema := schema.(*TwilioSubAccount)
+	client := twilio.NewClient(fSchema.SID, fSchema.AuthToken, nil)
 	return client, nil
 }
 
