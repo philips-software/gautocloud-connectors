@@ -34,7 +34,7 @@ func (c TwilioCientConnector) Load(schema interface{}) (interface{}, error) {
 	if err != nil {
 		return nil, err
 	}
-	fSchema := schema.(*SubAccount)
+	fSchema := schema.(*TwilioSubAccount)
 	client := twilio.NewClient(fSchema.SID, fSchema.AuthToken, nil)
 	return client, nil
 }

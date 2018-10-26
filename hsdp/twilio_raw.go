@@ -14,7 +14,7 @@ type TwilioSchema struct {
 	TwilioSID       string `cloud:"twilio_sid"`
 }
 
-type SubAccount struct {
+type TwilioSubAccount struct {
 	SID       string
 	AuthToken string
 }
@@ -36,7 +36,7 @@ func (c TwilioRawConnector) Tags() []string {
 }
 func (c TwilioRawConnector) Load(schema interface{}) (interface{}, error) {
 	fSchema := schema.(TwilioSchema)
-	return &SubAccount{
+	return &TwilioSubAccount{
 		SID:       fSchema.TwilioSID,
 		AuthToken: fSchema.TwilioAuthToken,
 	}, nil
