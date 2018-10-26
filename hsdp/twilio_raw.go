@@ -1,4 +1,4 @@
-package twilio
+package hsdp
 
 import (
 	"github.com/cloudfoundry-community/gautocloud"
@@ -9,7 +9,7 @@ func init() {
 	gautocloud.RegisterConnector(NewTwilioRawConnector())
 }
 
-type Schema struct {
+type TwilioSchema struct {
 	TwilioAuthToken string `cloud:"twilio_auth_token"`
 	TwilioSID       string `cloud:"twilio_sid"`
 }
@@ -35,7 +35,7 @@ func (c TwilioRawConnector) Tags() []string {
 	return []string{"twilio.*"}
 }
 func (c TwilioRawConnector) Load(schema interface{}) (interface{}, error) {
-	fSchema := schema.(Schema)
+	fSchema := schema.(TwilioSchema)
 	return &SubAccount{
 		SID:       fSchema.TwilioSID,
 		AuthToken: fSchema.TwilioAuthToken,
@@ -43,5 +43,5 @@ func (c TwilioRawConnector) Load(schema interface{}) (interface{}, error) {
 }
 
 func (c TwilioRawConnector) Schema() interface{} {
-	return Schema{}
+	return TwilioSchema{}
 }
