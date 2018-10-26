@@ -5,14 +5,14 @@ import (
     "github.com/aws/aws-sdk-go/aws"
     "github.com/aws/aws-sdk-go/service/dynamodb"
     "github.com/cloudfoundry-community/gautocloud"
-    gdynamodb "github.com/loafoe/gautocloud-connectors/dynamodb"
+    "github.com/loafoe/gautocloud-connectors/hsdp"
 )
 
 ```
 
 ```go
 	db, err := gautocloud.GetFirst("hsdp:dynamodb-client")
-	service, ok := db.(*gdynamodb.DynamoDBClient)
+	service, ok := db.(*hsdp.DynamoDBClient)
 	if ok {
 		fmt.Printf("Loaded DynamoDB client, table: %s\n", service.TableName)
 		req := &dynamodb.DescribeTableInput{
