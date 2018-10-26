@@ -1,10 +1,80 @@
-# gautocloud connector for HSDP Twilio
-This gautocloud connector retrieve the Twilio subaccount details from a bound hsdp twilio connection
+# gautocloud connector for HSDP CF services
+This repository contains [gautocloud connectors](https://github.com/cloudfoundry-community/gautocloud) for select HSDP Cloudfoundry services. At this time the following connectors are supported:
+
+- Twilio Raw
+- Twilio Go client
+- DynamoDB Raw
+- DynamoDB client
 
 # usage
-Include this connector in your gautocloud using project
 
 ```go
-import _ "gitub.com/loafoe/gautocloud-connectors/twilio"
-
+import (
+    "gitub.com/loafoe/gautocloud-connectors/hsdp"
+)
 ```
+## Twilio
+
+### Raw
+```go
+svc, err := gautocloud.GetFirst("hsdp:twilio-raw")
+if err == nil {
+    account, ok := svc.(hsdp.TwilioSubAccount)
+    if ok {
+        fmt.Printf("Loaded Twilio subaccount with SID: %s\n", account.SID)
+    }
+}
+```
+### Twilio-go client
+
+```go
+import (
+    "github.com/kevinburke/twilio-go"
+)
+```
+
+```go
+svc, err := gautocloud.GetFirst("hsdp:twilio-client")
+if err == nil {
+    client, ok := svc.(*twilio.Client)
+    if ok {
+        // Iterate over calls
+        iterator := client.Calls.GetPageIterator(url.Values{})
+        for {
+            page, err := iterator.Next(context.TODO())
+            if err == twilio.NoMoreResults {
+                break
+            }
+            fmt.Println("start", page.Start)
+        }
+    }
+}
+```
+
+## DynamoDB
+
+```go
+db, err := gautocloud.GetFirst("hsdp:dynamodb-client")
+service, ok := db.(*hsdp.DynamoDBClient)
+if ok {
+        fmt.Printf("Loaded DynamoDB client, table: %s\n", service.TableName)
+        req := &dynamodb.DescribeTableInput{
+                TableName: aws.String(service.TableName),
+        }
+        // Fetches and display details of the DynamoDB table
+        result, err := service.DescribeTable(req)
+        if err != nil {
+                fmt.Printf("%s", err)
+        }
+        table := result.Table
+        fmt.Printf("done: %v\n", table)
+}
+```
+
+# Author
+
+See [AUTHORS.TXT](AUTHORS.txt)
+
+# License
+
+License is MIT
