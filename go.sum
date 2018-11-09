@@ -1,3 +1,7 @@
+github.com/ArthurHlt/go-eureka-client v0.0.0-20170403140305-9d0a49cbd39a h1:Vrl1WHqCac7HPIxdWvqom9sDMbZ8lKlAO2JX7VeZcM4=
+github.com/ArthurHlt/go-eureka-client v0.0.0-20170403140305-9d0a49cbd39a/go.mod h1:yOAMDH2SD2lzSxAgC3B/89nYfMQp9Z8gbfon2v8xbSw=
+github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 h1:wa1Aba5rUE3Bt4kJYn44Jw3PeQr/0TooYRdKe55Hz3k=
+github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46/go.mod h1:1V+b/6E0XgMTStyFLfNJDUvTn1zsp5hkOU6+YowxRfU=
 github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/aws/aws-sdk-go v1.15.63 h1:rPr7eEm/FSK23DoDKhbd9oLMYGT7JU9pkyfBUVOHXUo=
@@ -10,6 +14,8 @@ github.com/cloudfoundry-community/go-cfenv v1.17.0 h1:qfxEfn8qKkaHY3ZEk/Y2noY79H
 github.com/cloudfoundry-community/go-cfenv v1.17.0/go.mod h1:2UgWvQTRXUuIZ/x3KnW6fk6CgPBhcV4UQb/UGIrUyyI=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/fatih/color v1.7.0 h1:DkWD4oS2D8LGGgTQ6IvwJJXSL5Vp2ffcQg58nFV38Ys=
+github.com/fatih/color v1.7.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=
 github.com/fsnotify/fsnotify v1.4.7 h1:IXs+QLmnXW2CcXuY+8Mzv/fWEsPGWxqefPtCP5CnV9I=
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
 github.com/go-stack/stack v1.8.0 h1:5SgMzNM5HxrEjV0ww2lTmX6E2Izsfxas4+YHWRs3Lsk=

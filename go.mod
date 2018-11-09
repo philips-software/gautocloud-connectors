@@ -1,11 +1,14 @@
 module github.com/hsdp/gautocloud-connectors
 
 require (
+	github.com/ArthurHlt/go-eureka-client v0.0.0-20170403140305-9d0a49cbd39a
+	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
 	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/aws/aws-sdk-go v1.15.63
 	github.com/azer/snakecase v1.0.0 // indirect
 	github.com/cloudfoundry-community/gautocloud v0.0.0-20180705161326-087edaf8ef16
 	github.com/cloudfoundry-community/go-cfenv v1.17.0 // indirect
+	github.com/fatih/color v1.7.0 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/golang/mock v1.1.1 // indirect
 	github.com/inconshreveable/log15 v0.0.0-20180818164646-67afb5ed74ec // indirect
