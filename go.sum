@@ -42,6 +42,8 @@ github.com/konsorten/go-windows-terminal-sequences v0.0.0-20180402223658-b729f26
 github.com/konsorten/go-windows-terminal-sequences v0.0.0-20180402223658-b729f2633dfe/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/loafoe/go-eureka-client v0.0.0-20181109173525-26e18db31d42 h1:bGegux3GGN1TnLMicEic9II/WarzrWtPTlgIULJ3rzo=
 github.com/loafoe/go-eureka-client v0.0.0-20181109173525-26e18db31d42/go.mod h1:r0ZnzUUhNN/UFemPCf0Y7IuXNuMRu0kkWt42WWMgkus=
+github.com/loafoe/go-eureka-client v0.0.0-20181109203617-2f88df43e773 h1:aiWt3eZZexehinZrxzAgbhZo0/ewVNQtRWXLcgKGMz0=
+github.com/loafoe/go-eureka-client v0.0.0-20181109203617-2f88df43e773/go.mod h1:r0ZnzUUhNN/UFemPCf0Y7IuXNuMRu0kkWt42WWMgkus=
 github.com/magiconair/properties v1.8.0 h1:LLgXmsheXeRoUOBOjtwPQCWIYqM/LU1ayDtDePerRcY=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/mattn/go-colorable v0.0.9 h1:UVL0vNpWh04HeJXV0KLcaT7r06gOH2l4OW6ddYRUIY4=
