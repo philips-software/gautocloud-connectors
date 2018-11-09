@@ -1,9 +1,9 @@
 package cups
 
 import (
-	"github.com/ArthurHlt/go-eureka-client/eureka"
 	"github.com/cloudfoundry-community/gautocloud"
 	"github.com/cloudfoundry-community/gautocloud/connectors"
+	"github.com/loafoe/go-eureka-client/eureka"
 )
 
 func init() {

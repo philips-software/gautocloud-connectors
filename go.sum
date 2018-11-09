@@ -1,5 +1,3 @@
-github.com/ArthurHlt/go-eureka-client v0.0.0-20170403140305-9d0a49cbd39a h1:Vrl1WHqCac7HPIxdWvqom9sDMbZ8lKlAO2JX7VeZcM4=
-github.com/ArthurHlt/go-eureka-client v0.0.0-20170403140305-9d0a49cbd39a/go.mod h1:yOAMDH2SD2lzSxAgC3B/89nYfMQp9Z8gbfon2v8xbSw=
 github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 h1:wa1Aba5rUE3Bt4kJYn44Jw3PeQr/0TooYRdKe55Hz3k=
 github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46/go.mod h1:1V+b/6E0XgMTStyFLfNJDUvTn1zsp5hkOU6+YowxRfU=
 github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ=
@@ -42,6 +40,8 @@ github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91 h1:eszyUFwEls
 github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91/go.mod h1:Fm9alkN1/LPVY1eqD/psyMwPWE4VWl4P01/nTYZKzBk=
 github.com/konsorten/go-windows-terminal-sequences v0.0.0-20180402223658-b729f2633dfe h1:CHRGQ8V7OlCYtwaKPJi3iA7J+YdNKdo8j7nG5IgDhjs=
 github.com/konsorten/go-windows-terminal-sequences v0.0.0-20180402223658-b729f2633dfe/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
+github.com/loafoe/go-eureka-client v0.0.0-20181109173525-26e18db31d42 h1:bGegux3GGN1TnLMicEic9II/WarzrWtPTlgIULJ3rzo=
+github.com/loafoe/go-eureka-client v0.0.0-20181109173525-26e18db31d42/go.mod h1:r0ZnzUUhNN/UFemPCf0Y7IuXNuMRu0kkWt42WWMgkus=
 github.com/magiconair/properties v1.8.0 h1:LLgXmsheXeRoUOBOjtwPQCWIYqM/LU1ayDtDePerRcY=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/mattn/go-colorable v0.0.9 h1:UVL0vNpWh04HeJXV0KLcaT7r06gOH2l4OW6ddYRUIY4=

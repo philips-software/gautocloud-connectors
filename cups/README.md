@@ -14,7 +14,7 @@ The connector uses the tag to discover the service. It returns an instance of th
 import (
     "github.com/cloudfoundry-community/gautocloud"
     "github.com/hsdp/gautocloud-connectors/cups"
-    "github.com/ArthurHlt/go-eureka-client/eureka"
+    "github.com/loafoe/go-eureka-client/eureka"
 )
 ```
 
