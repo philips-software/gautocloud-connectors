@@ -11,7 +11,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
 ```go
 import (
     "github.com/cloudfoundry-community/gautocloud"
-    "gitub.com/hsdp/gautocloud-connectors/hsdp"
+    "github.com/hsdp/gautocloud-connectors/hsdp"
 )
 ```
 ## Twilio Raw
