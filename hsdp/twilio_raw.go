@@ -1,6 +1,8 @@
 package hsdp
 
 import (
+	"fmt"
+
 	"github.com/cloudfoundry-community/gautocloud"
 	"github.com/cloudfoundry-community/gautocloud/connectors"
 )
@@ -35,7 +37,10 @@ func (c TwilioRawConnector) Tags() []string {
 	return []string{"twilio.*"}
 }
 func (c TwilioRawConnector) Load(schema interface{}) (interface{}, error) {
-	fSchema := schema.(TwilioSchema)
+	fSchema, ok := schema.(TwilioSchema)
+	if !ok || fSchema.TwilioSID == "" || fSchema.TwilioAuthToken == "" {
+		return nil, fmt.Errorf("empty SID or Token")
+	}
 	return TwilioSubAccount{
 		SID:       fSchema.TwilioSID,
 		AuthToken: fSchema.TwilioAuthToken,
