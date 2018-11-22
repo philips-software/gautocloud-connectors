@@ -54,6 +54,8 @@ github.com/loafoe/go-eureka-client v0.0.0-20181109203617-2f88df43e773 h1:aiWt3eZ
 github.com/loafoe/go-eureka-client v0.0.0-20181109203617-2f88df43e773/go.mod h1:r0ZnzUUhNN/UFemPCf0Y7IuXNuMRu0kkWt42WWMgkus=
 github.com/loafoe/go-eureka-client v0.0.0-20181122085916-07804b48bece h1:JWl1c1QJ4Jw24ESVI5OKSY4OLUpg2QJH852swLhO+kM=
 github.com/loafoe/go-eureka-client v0.0.0-20181122085916-07804b48bece/go.mod h1:r0ZnzUUhNN/UFemPCf0Y7IuXNuMRu0kkWt42WWMgkus=
+github.com/loafoe/go-eureka-client v0.0.0-20181122095032-b83c54542954 h1:e6XdI4lWEBqYxCBcJjbralPVXfGuNDwXL0Z/lxN3Y7s=
+github.com/loafoe/go-eureka-client v0.0.0-20181122095032-b83c54542954/go.mod h1:r0ZnzUUhNN/UFemPCf0Y7IuXNuMRu0kkWt42WWMgkus=
 github.com/magiconair/properties v1.8.0 h1:LLgXmsheXeRoUOBOjtwPQCWIYqM/LU1ayDtDePerRcY=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/mattn/go-colorable v0.0.9 h1:UVL0vNpWh04HeJXV0KLcaT7r06gOH2l4OW6ddYRUIY4=

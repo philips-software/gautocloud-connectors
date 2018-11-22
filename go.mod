@@ -19,7 +19,7 @@ require (
 	github.com/kevinburke/go.uuid v1.2.0 // indirect
 	github.com/kevinburke/rest v0.0.0-20180424040019-54a8b1109595 // indirect
 	github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91
-	github.com/loafoe/go-eureka-client v0.0.0-20181122085916-07804b48bece
+	github.com/loafoe/go-eureka-client v0.0.0-20181122095032-b83c54542954
 	github.com/mattn/go-colorable v0.0.9 // indirect
 	github.com/mattn/go-isatty v0.0.4 // indirect
 	github.com/miekg/dns v1.0.15 // indirect
