@@ -51,4 +51,28 @@ var _ = Describe("Raw", func() {
 
 		})
 	})
+	Context("Redshift", func() {
+		BeforeEach(func() {
+			connector = NewRedshiftRawConnector()
+		})
+		It("Should return a RedshiftCredentials struct when passing a RedshiftSchema", func() {
+			data, err := connector.Load(RedshiftSchema{
+				Password: "StrongPassw0rd",
+				Username:       "AKFooBar",
+				DatabaseName: "hsdpredhsift",
+				Hostname: "foo.bar.com",
+				Port: 5349,
+			})
+			Expect(err).NotTo(HaveOccurred())
+			Expect(data).Should(BeEquivalentTo(
+				RedshiftCredentials{
+					Password: "StrongPassw0rd",
+					Username:       "AKFooBar",
+					DatabaseName: "hsdpredhsift",
+					Hostname: "foo.bar.com",
+					Port: 5349,
+				},
+			))
+		})
+	})
 })

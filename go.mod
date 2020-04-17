@@ -1,5 +1,7 @@
 module github.com/hsdp/gautocloud-connectors
 
+go 1.14
+
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
 	github.com/BurntSushi/toml v0.3.1 // indirect

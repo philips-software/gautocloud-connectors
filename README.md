@@ -5,6 +5,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
 - [Twilio Go client](#twilio-go-client)
 - DynamoDB Raw
 - [DynamoDB client](#dynamodb-client)
+- Redshift Raw
 
 # usage
 
