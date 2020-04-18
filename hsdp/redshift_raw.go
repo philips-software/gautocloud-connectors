@@ -9,16 +9,16 @@ import (
 
 type RedshiftSchema struct {
 	DatabaseName string `cloud:"db_name"`
-	Hostname       string `cloud:"hostname"`
-	Username string `cloud:"username"`
-	Password string `cloud:"password"`
-	Port     int  `cloud:"port"`
-	URI      string `cloud:"uri"`
+	Hostname     string `cloud:"hostname"`
+	Username     string `cloud:"username"`
+	Password     string `cloud:"password"`
+	Port         int    `cloud:"port"`
+	URI          string `cloud:"uri"`
 }
 
 type RedshiftCredentials RedshiftSchema
 
-type RedshiftRawConnector struct {}
+type RedshiftRawConnector struct{}
 
 func (r RedshiftRawConnector) Id() string {
 	return "hsdp:redshift-raw"
@@ -34,7 +34,10 @@ func (r RedshiftRawConnector) Tags() []string {
 
 func (r RedshiftRawConnector) Load(schema interface{}) (interface{}, error) {
 	fSchema, ok := schema.(RedshiftSchema)
-	if !ok || fSchema.DatabaseName == "" || fSchema.Hostname == "" {
+	if !ok {
+		return nil, fmt.Errorf("no RedshiftSchema detected")
+	}
+	if fSchema.DatabaseName == "" || fSchema.Hostname == "" {
 		return nil, fmt.Errorf("empty database name or hostname")
 	}
 	return RedshiftCredentials(fSchema), nil
