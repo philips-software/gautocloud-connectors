@@ -32,7 +32,7 @@ func (r RedshiftConnector) Tags() []string {
 func (r RedshiftConnector) GetConnString(creds RedshiftCredentials) string {
 	connString := "user=" + creds.Username
 	if creds.Password != "" {
-		connString += "password=" + creds.Password
+		connString += " password=" + creds.Password
 	}
 	connString += fmt.Sprintf(" host=%s port=%d dbname=%s", creds.Hostname, creds.Port, creds.DatabaseName)
 	creds.Options = "sslmode=require"
