@@ -14,6 +14,7 @@ type RedshiftSchema struct {
 	Password     string `cloud:"password"`
 	Port         int    `cloud:"port"`
 	URI          string `cloud:"uri"`
+	Options      string
 }
 
 type RedshiftCredentials RedshiftSchema

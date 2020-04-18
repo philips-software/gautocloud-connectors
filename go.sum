@@ -54,6 +54,8 @@ github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91 h1:eszyUFwEls
 github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91/go.mod h1:Fm9alkN1/LPVY1eqD/psyMwPWE4VWl4P01/nTYZKzBk=
 github.com/konsorten/go-windows-terminal-sequences v0.0.0-20180402223658-b729f2633dfe h1:CHRGQ8V7OlCYtwaKPJi3iA7J+YdNKdo8j7nG5IgDhjs=
 github.com/konsorten/go-windows-terminal-sequences v0.0.0-20180402223658-b729f2633dfe/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
+github.com/lib/pq v1.3.0 h1:/qkRGz8zljWiDcFvgpwUpwIAPu3r07TDvs3Rws+o/pU=
+github.com/lib/pq v1.3.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
 github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71 h1:FRR0LcA2A+/sXF1k6r7qlPGADf8T+Y7V2LrQ13ENz70=
 github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71/go.mod h1:r0ZnzUUhNN/UFemPCf0Y7IuXNuMRu0kkWt42WWMgkus=
 github.com/magiconair/properties v1.8.0 h1:LLgXmsheXeRoUOBOjtwPQCWIYqM/LU1ayDtDePerRcY=
