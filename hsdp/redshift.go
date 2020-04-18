@@ -34,7 +34,7 @@ func (r RedshiftConnector) GetConnString(creds RedshiftCredentials) string {
 	if creds.Password != "" {
 		connString += ":" + creds.Password
 	}
-	connString += fmt.Sprintf("@tcp(%s:%d)/%s", creds.Hostname, creds.Port, creds.DatabaseName)
+	connString += fmt.Sprintf("%s:%d/%s", creds.Hostname, creds.Port, creds.DatabaseName)
 	creds.Options = "sslmode=prefer"
 	if creds.Options != "" {
 		connString += "?" + creds.Options
