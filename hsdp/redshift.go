@@ -29,25 +29,25 @@ func (r RedshiftConnector) Tags() []string {
 	return r.redshiftRawConnector.Tags()
 }
 
-func (r RedshiftConnector) GetConnString(schema RedshiftSchema) string {
-	connString := "postgres://" + schema.Username
-	if schema.Password != "" {
-		connString += ":" + schema.Password
+func (r RedshiftConnector) GetConnString(creds RedshiftCredentials) string {
+	connString := "postgres://" + creds.Username
+	if creds.Password != "" {
+		connString += ":" + creds.Password
 	}
-	connString += fmt.Sprintf("@tcp(%s:%d)/%s", schema.Hostname, schema.Port, schema.DatabaseName)
-	schema.Options = "sslmode=prefer"
-	if schema.Options != "" {
-		connString += "?" + schema.Options
+	connString += fmt.Sprintf("@tcp(%s:%d)/%s", creds.Hostname, creds.Port, creds.DatabaseName)
+	creds.Options = "sslmode=prefer"
+	if creds.Options != "" {
+		connString += "?" + creds.Options
 	}
 	return connString
 }
 
 func (r RedshiftConnector) Load(schema interface{}) (interface{}, error) {
-	schema, err := r.redshiftRawConnector.Load(schema)
+	creds, err := r.redshiftRawConnector.Load(schema)
 	if err != nil {
 		return nil, err
 	}
-	db, err := sql.Open("postgres", r.GetConnString(schema.(RedshiftSchema)))
+	db, err := sql.Open("postgres", r.GetConnString(creds.(RedshiftCredentials)))
 	if err != nil {
 		return db, err
 	}
