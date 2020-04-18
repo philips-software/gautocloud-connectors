@@ -4,15 +4,11 @@ Gautocloud provides a simple abstraction that golang based applications can use 
 # gautocloud connector for HSDP CF services
 This repository contains [gautocloud connectors](https://github.com/cloudfoundry-community/gautocloud) for select [HSDP](https://www.hsdp.io) Cloudfoundry services. At this time the following connectors are supported:
 
-- [gautocloud](#gautocloud)
-- [gautocloud connector for HSDP CF services](#gautocloud-connector-for-hsdp-cf-services)
 - [usage](#usage)
   - [Twilio Raw](#twilio-raw)
   - [Twilio Go client](#twilio-go-client)
   - [DynamoDB client](#dynamodb-client)
   - [Redshift](#redshift)
-- [Author](#author)
-- [License](#license)
 
 # usage
 
