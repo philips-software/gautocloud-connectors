@@ -10,6 +10,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - [Twilio Raw](#twilio-raw)
   - [Twilio Go client](#twilio-go-client)
   - [DynamoDB client](#dynamodb-client)
+  - [Redshift](#redshift)
 - [Author](#author)
 - [License](#license)
 
@@ -84,6 +85,41 @@ if ok {
         table := result.Table
         fmt.Printf("done: %v\n", table)
 }
+```
+
+## Redshift
+
+```go
+
+import (
+    "github.com/cloudfoundry-community/gautocloud"
+	"github.com/cloudfoundry-community/gautocloud/connectors/databases/dbtype"
+	_ "github.com/hsdp/gautocloud-connectors/hsdp"
+)
+```
+
+```go
+	var rs *dbtype.PostgresqlDB
+
+	err := gautocloud.InjectFromId("hsdp:redshift", &rs)
+
+	if err != nil {
+		fmt.Printf("failed to find attached database: %v\n", err)
+		return
+	}
+
+	rows, err := rs.Query("SELECT now()")
+
+	if err != nil {
+		fmt.Printf("query error: %v\n", err)
+		return
+    }
+    
+	for rows.Next() {
+		var col string
+		rows.Scan(&col)
+		fmt.Printf("%v\n", col)
+	}
 ```
 
 # Author
