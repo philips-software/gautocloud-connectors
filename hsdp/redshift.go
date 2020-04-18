@@ -30,14 +30,14 @@ func (r RedshiftConnector) Tags() []string {
 }
 
 func (r RedshiftConnector) GetConnString(creds RedshiftCredentials) string {
-	connString := "postgres://" + creds.Username
+	connString := "user=" + creds.Username
 	if creds.Password != "" {
-		connString += ":" + creds.Password
+		connString += "password=" + creds.Password
 	}
-	connString += fmt.Sprintf("%s:%d/%s", creds.Hostname, creds.Port, creds.DatabaseName)
+	connString += fmt.Sprintf(" host=%s port=%d dbname=%s", creds.Hostname, creds.Port, creds.DatabaseName)
 	creds.Options = "sslmode=prefer"
 	if creds.Options != "" {
-		connString += "?" + creds.Options
+		connString += " " + creds.Options
 	}
 	return connString
 }
