@@ -93,8 +93,8 @@ if ok {
 
 import (
     "github.com/cloudfoundry-community/gautocloud"
-	"github.com/cloudfoundry-community/gautocloud/connectors/databases/dbtype"
-	_ "github.com/hsdp/gautocloud-connectors/hsdp"
+    "github.com/cloudfoundry-community/gautocloud/connectors/databases/dbtype"
+    _ "github.com/hsdp/gautocloud-connectors/hsdp"
 )
 ```
 
