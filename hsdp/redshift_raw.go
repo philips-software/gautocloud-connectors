@@ -44,7 +44,7 @@ func (r RedshiftRawConnector) Load(schema interface{}) (interface{}, error) {
 }
 
 func (r RedshiftRawConnector) Schema() interface{} {
-	return RedshiftCredentials{}
+	return RedshiftSchema{}
 }
 
 func init() {
