@@ -13,7 +13,7 @@ The connector uses the tag to discover the service. It returns an instance of th
 ```go
 import (
     "github.com/cloudfoundry-community/gautocloud"
-    "github.com/hsdp/gautocloud-connectors/cups"
+    "github.com/philips-software/gautocloud-connectors/cups"
     "github.com/loafoe/go-eureka-client/eureka"
 )
 ```

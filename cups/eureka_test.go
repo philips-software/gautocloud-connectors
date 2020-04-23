@@ -2,7 +2,7 @@ package cups_test
 
 import (
 	"github.com/cloudfoundry-community/gautocloud/connectors"
-	. "github.com/hsdp/gautocloud-connectors/cups"
+	. "gautocloud-connectors/cups"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -1,4 +1,4 @@
-module github.com/hsdp/gautocloud-connectors
+module gautocloud-connectors
 
 go 1.14
 

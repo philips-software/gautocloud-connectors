@@ -15,7 +15,7 @@ Import the packages in your app, this will register all the supported connectors
 ```go
 import (
     "github.com/cloudfoundry-community/gautocloud"
-    "github.com/hsdp/gautocloud-connectors/hsdp"
+    "github.com/philips-software/gautocloud-connectors/hsdp"
 )
 ```
 ## Twilio Raw
@@ -37,6 +37,8 @@ This returns a configured Twilio Go client based on [github.com/kevinburke/twili
 ```go
 import (
     "github.com/kevinburke/twilio-go"
+    "github.com/cloudfoundry-community/gautocloud"
+    _ "github.com/philips-software/gautocloud-connectors/hsdp"
 )
 ```
 
@@ -65,6 +67,8 @@ A configured DynamDBClient based on the [AWS SDK](https://docs.aws.amazon.com/sd
 import (
     "github.com/aws/aws-sdk-go/aws"
     "github.com/aws/aws-sdk-go/service/dynamodb"
+    "github.com/cloudfoundry-community/gautocloud"
+    _ "github.com/philips-software/gautocloud-connectors/hsdp"
 )
 ```
 
@@ -94,7 +98,7 @@ This returns a configured (wrapped) PostgreSQLDB connection ready for use.
 import (
     "github.com/cloudfoundry-community/gautocloud"
     "github.com/cloudfoundry-community/gautocloud/connectors/databases/dbtype"
-    _ "github.com/hsdp/gautocloud-connectors/hsdp"
+    _ "github.com/philips-software/gautocloud-connectors/hsdp"
 )
 ```
 
