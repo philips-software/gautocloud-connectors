@@ -1,16 +1,16 @@
 # gautocloud
 Gautocloud provides a simple abstraction that golang based applications can use to discover information about the cloud environment on which they are running, to connect to services automatically with ease of use in mind. It provides out-of-the-box support for discovering common services on Heroku, Cloud Foundry and kubernetes cloud platforms, and it supports custom automatic connectors. For more details see the [gautocloud project](https://github.com/cloudfoundry-community/gautocloud)
 
-# gautocloud connector for HSDP CF services
-This repository contains [gautocloud connectors](https://github.com/cloudfoundry-community/gautocloud) for select [HSDP](https://www.hsdp.io) Cloudfoundry services. At this time the following connectors are supported:
+# gautocloud connectors for HSDP services
+This repository contains [gautocloud connectors](https://github.com/cloudfoundry-community/gautocloud) for select [HSDP](https://www.hsdp.io) Cloud foundry services. At this time the following connectors are supported:
 
-- [usage](#usage)
   - [Twilio Raw](#twilio-raw)
   - [Twilio Go client](#twilio-go-client)
   - [DynamoDB client](#dynamodb-client)
   - [Redshift](#redshift)
 
 # usage
+Import the packages in your app, this will register all the supported connectors and you can proceed to detect the services you need:
 
 ```go
 import (
@@ -19,6 +19,7 @@ import (
 )
 ```
 ## Twilio Raw
+This returns the credentials so you can use them as you see fit
 
 ```go
 svc, err := gautocloud.GetFirst("hsdp:twilio-raw")
@@ -31,6 +32,7 @@ if err == nil {
 ```
 
 ## Twilio Go client
+This returns a configured Twilio Go client based on [github.com/kevinburke/twilio-go](https://github.com/kevinburke/twilio-go)
 
 ```go
 import (
@@ -57,6 +59,7 @@ if err == nil {
 ```
 
 ## DynamoDB client
+A configured DynamDBClient based on the [AWS SDK](https://docs.aws.amazon.com/sdk-for-go/api/service/dynamodb/)
 
 ```go
 import (
@@ -84,6 +87,7 @@ if ok {
 ```
 
 ## Redshift
+This returns a configured (wrapped) PostgreSQLDB connection ready for use.
 
 ```go
 
@@ -118,10 +122,14 @@ import (
 	}
 ```
 
-# Author
+# Contact / Getting help
 
-See [AUTHORS.TXT](AUTHORS.txt)
+andy.lo-a-foe@philips.com
+
+# Application examples
+
+Coming soon..
 
 # License
 
-License is MIT
+License is [MIT](LICENSE.md)
