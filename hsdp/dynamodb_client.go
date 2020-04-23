@@ -19,29 +19,29 @@ type DynamoDBClient struct {
 	TableName string
 }
 
-type DynamoDBCientConnector struct {
+type DynamoDBClientConnector struct {
 	wrapRawConn connectors.Connector
 }
 
 func NewDynamoDBClientConnector() connectors.Connector {
-	return &DynamoDBCientConnector{
+	return &DynamoDBClientConnector{
 		wrapRawConn: NewDynamoDBRawConnector(),
 	}
 }
 
-func (c DynamoDBCientConnector) Id() string {
+func (c DynamoDBClientConnector) Id() string {
 	return "hsdp:dynamodb-client"
 }
 
-func (c DynamoDBCientConnector) Name() string {
+func (c DynamoDBClientConnector) Name() string {
 	return ".*dynamodb.*"
 }
 
-func (c DynamoDBCientConnector) Tags() []string {
+func (c DynamoDBClientConnector) Tags() []string {
 	return []string{"DynamoDB.*"}
 }
 
-func (c DynamoDBCientConnector) Load(schema interface{}) (interface{}, error) {
+func (c DynamoDBClientConnector) Load(schema interface{}) (interface{}, error) {
 	schema, err := c.wrapRawConn.Load(schema)
 	if err != nil {
 		return nil, err
@@ -64,6 +64,6 @@ func (c DynamoDBCientConnector) Load(schema interface{}) (interface{}, error) {
 	}, nil
 }
 
-func (c DynamoDBCientConnector) Schema() interface{} {
+func (c DynamoDBClientConnector) Schema() interface{} {
 	return c.wrapRawConn.Schema()
 }
