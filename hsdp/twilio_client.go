@@ -10,26 +10,26 @@ func init() {
 	gautocloud.RegisterConnector(NewTwilioClientConnector())
 }
 
-type TwilioCientConnector struct {
+type TwilioClientConnector struct {
 	wrapRawConn connectors.Connector
 }
 
 func NewTwilioClientConnector() connectors.Connector {
-	return &TwilioCientConnector{
+	return &TwilioClientConnector{
 		wrapRawConn: NewTwilioRawConnector(),
 	}
 }
 
-func (c TwilioCientConnector) Id() string {
+func (c TwilioClientConnector) Id() string {
 	return "hsdp:twilio-client"
 }
-func (c TwilioCientConnector) Name() string {
+func (c TwilioClientConnector) Name() string {
 	return ".*twilio.*"
 }
-func (c TwilioCientConnector) Tags() []string {
+func (c TwilioClientConnector) Tags() []string {
 	return []string{"twilio.*"}
 }
-func (c TwilioCientConnector) Load(schema interface{}) (interface{}, error) {
+func (c TwilioClientConnector) Load(schema interface{}) (interface{}, error) {
 	schema, err := c.wrapRawConn.Load(schema)
 	if err != nil {
 		return nil, err
@@ -39,6 +39,6 @@ func (c TwilioCientConnector) Load(schema interface{}) (interface{}, error) {
 	return client, nil
 }
 
-func (c TwilioCientConnector) Schema() interface{} {
+func (c TwilioClientConnector) Schema() interface{} {
 	return c.wrapRawConn.Schema()
 }
