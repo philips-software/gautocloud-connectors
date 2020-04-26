@@ -42,6 +42,7 @@ func (v VaultClientConnector) Load(schema interface{}) (interface{}, error) {
 	if err != nil {
 		return nil, err
 	}
+	client.SetAddress(fSchema.Endpoint)
 	secret, err := client.Logical().Write("auth/approle/login", map[string]interface{}{
 		"role_id":   fSchema.RoleID,
 		"secret_id": fSchema.SecretID,
