@@ -20,14 +20,6 @@ type VaultClient struct {
 	VaultCredentials
 }
 
-func (v *VaultClient) WriteOrgSecret(path string, data map[string]interface{}) (*vault.Secret, error) {
-	return v.Client.Logical().Write(v.OrgSecretPath+"/"+path, data)
-}
-
-func (v *VaultClient) ReadOrgSecret(path string) (*vault.Secret, error) {
-	return v.Client.Logical().Read(v.OrgSecretPath + "/" + path)
-}
-
 func (v *VaultClient) WriteSpaceSecret(path string, data map[string]interface{}) (*vault.Secret, error) {
 	return v.Client.Logical().Write(v.SpaceSecretPath+"/"+path, data)
 }
