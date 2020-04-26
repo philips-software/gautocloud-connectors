@@ -4,6 +4,7 @@ import (
 	"github.com/cloudfoundry-community/gautocloud"
 	"github.com/cloudfoundry-community/gautocloud/connectors"
 	vault "github.com/hashicorp/vault/api"
+	"strings"
 )
 
 func init() {
@@ -17,6 +18,50 @@ type VaultClientConnector struct {
 type VaultClient struct {
 	*vault.Client
 	VaultCredentials
+}
+
+func (v *VaultClient) WriteOrgSecret(path string, data map[string]interface{}) (*vault.Secret, error) {
+	return v.Client.Logical().Write(v.OrgSecretPath+"/"+path, data)
+}
+
+func (v *VaultClient) ReadOrgSecret(path string) (*vault.Secret, error) {
+	return v.Client.Logical().Read(v.OrgSecretPath + "/" + path)
+}
+
+func (v *VaultClient) WriteSpaceSecret(path string, data map[string]interface{}) (*vault.Secret, error) {
+	return v.Client.Logical().Write(v.SpaceSecretPath+"/"+path, data)
+}
+
+func (v *VaultClient) ReadSpaceSecret(path string) (*vault.Secret, error) {
+	return v.Client.Logical().Read(v.SpaceSecretPath + "/" + path)
+}
+
+func (v *VaultClient) WriteServiceSecret(path string, data map[string]interface{}) (*vault.Secret, error) {
+	return v.Client.Logical().Write(v.ServiceSecretPath+"/"+path, data)
+}
+
+func (v *VaultClient) ReadServiceSecret(path string) (*vault.Secret, error) {
+	return v.Client.Logical().Read(v.ServiceSecretPath + "/" + path)
+}
+func (v *VaultClient) WriteServiceTransit(path string, data map[string]interface{}) (*vault.Secret, error) {
+	return v.Client.Logical().Write(v.ServiceTransitPath+"/"+path, data)
+}
+
+func (v *VaultClient) ReadServiceTransit(path string) (*vault.Secret, error) {
+	return v.Client.Logical().Read(v.ServiceTransitPath + "/" + path)
+}
+
+func (v *VaultClient) stripV1() {
+	for _, s := range []*string{
+		&v.OrgSecretPath,
+		&v.ServiceTransitPath,
+		&v.SpaceSecretPath,
+		&v.ServiceSecretPath,
+	} {
+		if parts := strings.Split(*s, "/"); len(parts) > 2 && parts[1] == "v1" {
+			*s = strings.Join(parts[2:], "/")
+		}
+	}
 }
 
 func (v VaultClientConnector) Id() string {
@@ -53,10 +98,12 @@ func (v VaultClientConnector) Load(schema interface{}) (interface{}, error) {
 	client.SetToken(secret.Auth.ClientToken)
 	client.Auth().Token().RenewSelf(1800)
 
-	return &VaultClient{
+	vaultClient := &VaultClient{
 		Client:           client,
 		VaultCredentials: fSchema,
-	}, nil
+	}
+	vaultClient.stripV1()
+	return vaultClient, nil
 }
 
 func (v VaultClientConnector) Schema() interface{} {

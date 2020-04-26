@@ -4,18 +4,15 @@ go 1.14
 
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
-	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/aws/aws-sdk-go v1.15.63
 	github.com/azer/snakecase v1.0.0 // indirect
 	github.com/cenkalti/backoff v2.0.0+incompatible // indirect
 	github.com/clbanning/x2j v0.0.0-20180326210544-5e605d46809c // indirect
 	github.com/cloudfoundry-community/gautocloud v0.0.0-20180705161326-087edaf8ef16
 	github.com/cloudfoundry-community/go-cfenv v1.17.0 // indirect
-	github.com/fatih/color v1.7.0 // indirect
 	github.com/franela/goblin v0.0.0-20181003173013-ead4ad1d2727 // indirect
 	github.com/franela/goreq v0.0.0-20171204163338-bcd34c9993f8 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
-	github.com/golang/mock v1.1.1 // indirect
 	github.com/gopherjs/gopherjs v0.0.0-20181103185306-d547d1d9531e // indirect
 	github.com/hashicorp/vault/api v1.0.4
 	github.com/hudl/fargo v1.2.0
@@ -27,7 +24,6 @@ require (
 	github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91
 	github.com/lib/pq v1.3.0
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
-	github.com/mattn/go-colorable v0.0.9 // indirect
 	github.com/mattn/go-isatty v0.0.4 // indirect
 	github.com/miekg/dns v1.0.15 // indirect
 	github.com/onsi/ginkgo v1.6.0
@@ -38,6 +34,7 @@ require (
 	github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d // indirect
 	github.com/smartystreets/goconvey v0.0.0-20181108003508-044398e4856c // indirect
 	github.com/spf13/viper v1.2.1 // indirect
+	github.com/stretchr/testify v1.3.0
 	github.com/ttacon/builder v0.0.0-20170518171403-c099f663e1c2 // indirect
 	github.com/ttacon/libphonenumber v1.0.0 // indirect
 	gopkg.in/gcfg.v1 v1.2.3 // indirect
