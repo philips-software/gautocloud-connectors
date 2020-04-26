@@ -1,8 +1,8 @@
 package hsdp_test
 
 import (
-	. "gautocloud-connectors/hsdp"
 	"github.com/cloudfoundry-community/gautocloud/connectors"
+	. "github.com/philips-software/gautocloud-connectors/hsdp"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

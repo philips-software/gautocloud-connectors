@@ -1,4 +1,4 @@
-module gautocloud-connectors
+module github.com/philips-software/gautocloud-connectors
 
 go 1.14
 
