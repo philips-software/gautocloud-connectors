@@ -8,6 +8,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - [Twilio Go client](#twilio-go-client)
   - [DynamoDB client](#dynamodb-client)
   - [Redshift](#redshift)
+  - [Vault client](#vault-client)
 
 # usage
 Import the packages in your app, this will register all the supported connectors and you can proceed to detect the services you need:
@@ -124,6 +125,36 @@ import (
 		rows.Scan(&col)
 		fmt.Printf("%v\n", col)
 	}
+```
+
+## Vault client
+A VaultClient instance is returns which is composed of the official Hashicorp Go Vault client and a VaultCredentials struct containing all the fields found in the service broker
+
+```go
+import (
+	"github.com/cloudfoundry-community/gautocloud"
+	"github.com/philips-software/gautocloud-connectors/hsdp"
+)
+
+```
+
+```go
+	var vaultClient *hsdp.VaultClient
+
+	err := gautocloud.Inject(&vaultClient)
+
+	if err != nil {
+		fmt.Printf("%v\n", err)
+		return
+	}
+
+	secret, err := vaultClient.WriteSpaceSecret("mysecret",
+	 	map[string]interface{}{
+			"foo": "bar",
+			"alice": "bob",
+			"bob": "trudy",
+		})
+		
 ```
 
 # Contact / Getting help
