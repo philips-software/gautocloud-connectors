@@ -51,26 +51,53 @@ var _ = Describe("Raw", func() {
 
 		})
 	})
+	Context("VaultRaw", func() {
+		BeforeEach(func() {
+			connector = NewVaultRawConnector()
+		})
+		It("Should return a VaultCredential like struct when passing a VaultSchema", func() {
+			data, err := connector.Load(VaultSchema{
+				SecretID:           "some-key",
+				RoleID:             "us-east-1",
+				Endpoint:           "http://vault.local",
+				ServiceSecretPath:  "/service/secret",
+				SpaceSecretPath:    "/space/secret",
+				ServiceTransitPath: "/transit/path",
+			})
+			Expect(err).NotTo(HaveOccurred())
+			Expect(data).Should(BeEquivalentTo(
+				VaultCredentials{
+					SecretID:           "some-key",
+					RoleID:             "us-east-1",
+					Endpoint:           "http://vault.local",
+					ServiceSecretPath:  "/service/secret",
+					SpaceSecretPath:    "/space/secret",
+					ServiceTransitPath: "/transit/path",
+				},
+			))
+
+		})
+	})
 	Context("Redshift", func() {
 		BeforeEach(func() {
 			connector = NewRedshiftRawConnector()
 		})
 		It("Should return a RedshiftCredentials struct when passing a RedshiftSchema", func() {
 			data, err := connector.Load(RedshiftSchema{
-				Password: "StrongPassw0rd",
-				Username:       "AKFooBar",
+				Password:     "StrongPassw0rd",
+				Username:     "AKFooBar",
 				DatabaseName: "hsdpredhsift",
-				Hostname: "foo.bar.com",
-				Port: 5349,
+				Hostname:     "foo.bar.com",
+				Port:         5349,
 			})
 			Expect(err).NotTo(HaveOccurred())
 			Expect(data).Should(BeEquivalentTo(
 				RedshiftCredentials{
-					Password: "StrongPassw0rd",
-					Username:       "AKFooBar",
+					Password:     "StrongPassw0rd",
+					Username:     "AKFooBar",
 					DatabaseName: "hsdpredhsift",
-					Hostname: "foo.bar.com",
-					Port: 5349,
+					Hostname:     "foo.bar.com",
+					Port:         5349,
 				},
 			))
 		})
