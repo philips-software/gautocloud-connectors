@@ -162,14 +162,14 @@ import (
 An S3Client instance is returns which is composed of an AWS S3 Credentials Session and S3Credentials struct containing all the fields found in the service broker credentials
 
 ```go
+package main
+
 import (
 	"github.com/cloudfoundry-community/gautocloud"
 	"github.com/philips-software/gautocloud-connectors/hsdp"
 )
 
-```
-
-```go
+func main() {
 	var svc *hsdp.S3Client
 
 	err := gautocloud.Inject(&svc)
@@ -179,13 +179,14 @@ import (
 		return
 	}
 
-    req, _ := svc.GetObjectRequest(&s3.GetObjectInput{
-       Bucket: aws.String("cf-s3-mys3-buck-etaa-here-b3e81da982fa"),
-       Key:    aws.String("/public/somefile.zip"),
-    })
-    str, err := req.Presign(15 * time.Minute)
+	req, _ := svc.GetObjectRequest(&s3.GetObjectInput{
+		Bucket: aws.String("cf-s3-mys3-buck-etaa-here-b3e81da982fa"),
+		Key:    aws.String("/public/somefile.zip"),
+	})
+	str, err := req.Presign(15 * time.Minute)
 
-    fmt.Println("The URL is:", str, " err:", err)		
+	fmt.Println("The URL is:", str, " err:", err)
+}
 ```
 
 
