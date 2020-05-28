@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
-	github.com/aws/aws-sdk-go v1.15.63
+	github.com/aws/aws-sdk-go v1.31.6
 	github.com/azer/snakecase v1.0.0 // indirect
 	github.com/cenkalti/backoff v2.0.0+incompatible // indirect
 	github.com/clbanning/x2j v0.0.0-20180326210544-5e605d46809c // indirect
@@ -34,7 +34,7 @@ require (
 	github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d // indirect
 	github.com/smartystreets/goconvey v0.0.0-20181108003508-044398e4856c // indirect
 	github.com/spf13/viper v1.2.1 // indirect
-	github.com/stretchr/testify v1.3.0
+	github.com/stretchr/testify v1.5.1
 	github.com/ttacon/builder v0.0.0-20170518171403-c099f663e1c2 // indirect
 	github.com/ttacon/libphonenumber v1.0.0 // indirect
 	gopkg.in/gcfg.v1 v1.2.3 // indirect

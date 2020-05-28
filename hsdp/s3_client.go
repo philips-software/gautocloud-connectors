@@ -2,6 +2,7 @@ package hsdp
 
 import (
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/cloudfoundry-community/gautocloud"
@@ -40,9 +41,14 @@ func (v S3ClientConnector) Load(schema interface{}) (interface{}, error) {
 	}
 	fSchema := schema.(S3Credentials)
 
+	region := "us-east-1" // Not sure if this is a good default
+	if str, ok := fSchema.LocationConstraint.(string); ok {
+		region = str
+	}
 	sess, err := session.NewSession(&aws.Config{
-		Region: aws.String("us-east-1")},
-	)
+		Region:      aws.String(region),
+		Credentials: credentials.NewStaticCredentials(fSchema.APIKey, fSchema.SecretKey, ""),
+	})
 	// Create S3 service client
 	svc := s3.New(sess)
 
