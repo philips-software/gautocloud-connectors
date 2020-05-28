@@ -9,6 +9,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - [DynamoDB client](#dynamodb-client)
   - [Redshift](#redshift)
   - [Vault client](#vault-client)
+  - [S3 client](#S3-client)
 
 # usage
 Import the packages in your app, this will register all the supported connectors and you can proceed to detect the services you need:
@@ -156,6 +157,37 @@ import (
 		})
 		
 ```
+
+## S3 client
+An S3Client instance is returns which is composed of an AWS S3 Credentials Session and S3Credentials struct containing all the fields found in the service broker credentials
+
+```go
+import (
+	"github.com/cloudfoundry-community/gautocloud"
+	"github.com/philips-software/gautocloud-connectors/hsdp"
+)
+
+```
+
+```go
+	var svc *hsdp.S3Client
+
+	err := gautocloud.Inject(&svc)
+
+	if err != nil {
+		fmt.Printf("%v\n", err)
+		return
+	}
+
+    req, _ := svc.GetObjectRequest(&s3.GetObjectInput{
+       Bucket: aws.String("cf-s3-mys3-buck-etaa-here-b3e81da982fa"),
+       Key:    aws.String("/public/somefile.zip"),
+    })
+    str, err := req.Presign(15 * time.Minute)
+
+    fmt.Println("The URL is:", str, " err:", err)		
+```
+
 
 # Contact / Getting help
 
