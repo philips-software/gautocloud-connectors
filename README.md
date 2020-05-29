@@ -180,7 +180,7 @@ func main() {
 	}
 
 	req, _ := svc.GetObjectRequest(&s3.GetObjectInput{
-		Bucket: aws.String("cf-s3-mys3-buck-etaa-here-b3e81da982fa"),
+		Bucket: aws.String(svc.Bucket),
 		Key:    aws.String("/public/somefile.zip"),
 	})
 	str, err := req.Presign(15 * time.Minute)
