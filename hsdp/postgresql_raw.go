@@ -1,6 +1,7 @@
 package hsdp
 
 import (
+	"fmt"
 	"github.com/cloudfoundry-community/gautocloud"
 	"github.com/cloudfoundry-community/gautocloud/connectors"
 )
@@ -33,10 +34,16 @@ func (c PostgresSQLRawConnector) Name() string {
 	return ".*postgres.*"
 }
 func (c PostgresSQLRawConnector) Tags() []string {
-	return []string{"PostgreSQL.*"}
+	return []string{"PostgreSQL.*", "RDS"}
 }
 func (c PostgresSQLRawConnector) Load(schema interface{}) (interface{}, error) {
-	fSchema := schema.(PostgresSQLSchema)
+	fSchema, ok := schema.(PostgresSQLSchema)
+	if !ok {
+		return nil, fmt.Errorf("no PostgresSQLSchema detected")
+	}
+	if fSchema.DBName == "" || fSchema.Hostname == "" {
+		return nil, fmt.Errorf("empty database name or hostname")
+	}
 	return fSchema, nil
 }
 

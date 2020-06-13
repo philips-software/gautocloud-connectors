@@ -31,11 +31,11 @@ func (c PostgresSQLClientConnector) Id() string {
 }
 
 func (c PostgresSQLClientConnector) Name() string {
-	return ".*postgresql.*"
+	return c.wrapRawConn.Name()
 }
 
 func (c PostgresSQLClientConnector) Tags() []string {
-	return []string{"PostgresSQL.*"}
+	return c.wrapRawConn.Tags()
 }
 
 func (c PostgresSQLClientConnector) GetConnString(schema PostgresSQLSchema) string {
@@ -65,7 +65,6 @@ func (c PostgresSQLClientConnector) Load(schema interface{}) (interface{}, error
 	if err != nil {
 		return nil, err
 	}
-
 	return &PostgresSQLClient{
 		DB: db,
 	}, nil
