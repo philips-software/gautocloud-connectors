@@ -10,6 +10,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - [Redshift](#redshift)
   - [Vault client](#vault-client)
   - [S3 client](#S3-client)
+  - [PostgreSQL client](#PostgreSQL-client)
 
 # usage
 Import the packages in your app, this will register all the supported connectors and you can proceed to detect the services you need:
@@ -129,7 +130,7 @@ import (
 ```
 
 ## Vault client
-A VaultClient instance is returns which is composed of the official Hashicorp Go Vault client and a VaultCredentials struct containing all the fields found in the service broker
+Returns a VaultClient instance which is composed of the official Hashicorp Go Vault client and a VaultCredentials struct containing all the fields found in the service broker
 
 ```go
 import (
@@ -159,7 +160,7 @@ import (
 ```
 
 ## S3 client
-An S3Client instance is returns which is composed of an AWS S3 Credentials Session and S3Credentials struct containing all the fields found in the service broker credentials
+Returns an S3Client instance which is composed of an AWS S3 Credentials Session and S3Credentials struct containing all the fields found in the service broker credentials
 
 ```go
 package main
@@ -186,6 +187,36 @@ func main() {
 	str, err := req.Presign(15 * time.Minute)
 
 	fmt.Println("The URL is:", str, " err:", err)
+}
+```
+
+# PostgreSQL client
+Returns an initialized wrapped *sql.DB connection to our PostgreSQL database
+
+```go
+package main
+
+import (
+    "fmt"
+	"github.com/cloudfoundry-community/gautocloud"
+	"github.com/philips-software/gautocloud-connectors/hsdp"
+)
+
+func main() {
+	var svc *hsdp.PostgresSQLClient
+
+	err := gautocloud.Inject(&svc)
+
+	rows, err := svc.DB.Query("SELECT now()")
+	if err != nil {
+		fmt.Printf("%v\n", err)
+		return
+	}
+	for rows.Next() {
+		var col string
+		rows.Scan(&col)
+		fmt.Printf("%v\n", col)
+   }
 }
 ```
 
