@@ -203,7 +203,7 @@ import (
 )
 
 func main() {
-	var svc *hsdp.PostgresSQLClient
+	var svc *hsdp.PostgreSQLClient
 
 	err := gautocloud.Inject(&svc)
 

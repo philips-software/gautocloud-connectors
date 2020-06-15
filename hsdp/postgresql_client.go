@@ -12,33 +12,33 @@ func init() {
 	gautocloud.RegisterConnector(NewPostgresSQLClientConnector())
 }
 
-type PostgresSQLClient struct {
+type PostgreSQLClient struct {
 	*sql.DB
 }
 
-type PostgresSQLClientConnector struct {
+type PostgreSQLClientConnector struct {
 	wrapRawConn connectors.Connector
 }
 
 func NewPostgresSQLClientConnector() connectors.Connector {
-	return &PostgresSQLClientConnector{
+	return &PostgreSQLClientConnector{
 		wrapRawConn: NewPostgresSQLRawConnector(),
 	}
 }
 
-func (c PostgresSQLClientConnector) Id() string {
+func (c PostgreSQLClientConnector) Id() string {
 	return "hsdp:postgresql-client"
 }
 
-func (c PostgresSQLClientConnector) Name() string {
+func (c PostgreSQLClientConnector) Name() string {
 	return c.wrapRawConn.Name()
 }
 
-func (c PostgresSQLClientConnector) Tags() []string {
+func (c PostgreSQLClientConnector) Tags() []string {
 	return c.wrapRawConn.Tags()
 }
 
-func (c PostgresSQLClientConnector) GetConnString(schema PostgresSQLSchema) string {
+func (c PostgreSQLClientConnector) GetConnString(schema PostgresSQLSchema) string {
 	connString := "postgres://" + schema.Username
 	if schema.Password != "" {
 		connString += ":" + schema.Password
@@ -50,7 +50,7 @@ func (c PostgresSQLClientConnector) GetConnString(schema PostgresSQLSchema) stri
 	return connString
 }
 
-func (c PostgresSQLClientConnector) Load(schema interface{}) (interface{}, error) {
+func (c PostgreSQLClientConnector) Load(schema interface{}) (interface{}, error) {
 	schema, err := c.wrapRawConn.Load(schema)
 	if err != nil {
 		return nil, err
@@ -65,11 +65,11 @@ func (c PostgresSQLClientConnector) Load(schema interface{}) (interface{}, error
 	if err != nil {
 		return nil, err
 	}
-	return &PostgresSQLClient{
+	return &PostgreSQLClient{
 		DB: db,
 	}, nil
 }
 
-func (c PostgresSQLClientConnector) Schema() interface{} {
+func (c PostgreSQLClientConnector) Schema() interface{} {
 	return c.wrapRawConn.Schema()
 }
