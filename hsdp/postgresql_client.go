@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/cloudfoundry-community/gautocloud"
 	"github.com/cloudfoundry-community/gautocloud/connectors"
-	_ "github.com/lib/pq"
+        _ "github.com/jackc/pgx/v4"
 )
 
 func init() {
