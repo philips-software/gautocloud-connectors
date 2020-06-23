@@ -11,6 +11,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - [Vault client](#vault-client)
   - [S3 client](#S3-client)
   - [PostgreSQL client](#PostgreSQL-client)
+  - [Iron Raw]
 
 # usage
 Import the packages in your app, this will register all the supported connectors and you can proceed to detect the services you need:
