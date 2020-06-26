@@ -5,13 +5,14 @@ Gautocloud provides a simple abstraction that golang based applications can use 
 This repository contains [gautocloud connectors](https://github.com/cloudfoundry-community/gautocloud) for select [HSDP](https://www.hsdp.io) Cloud foundry services. At this time the following connectors are supported:
 
   - [Twilio Raw](#twilio-raw)
-  - [Twilio Go client](#twilio-go-client)
-  - [DynamoDB client](#dynamodb-client)
+  - [Twilio Client](#twilio-go-client)
+  - [DynamoDB Client](#dynamodb-client)
   - [Redshift](#redshift)
-  - [Vault client](#vault-client)
-  - [S3 client](#S3-client)
-  - [PostgreSQL client](#PostgreSQL-client)
-  - [Iron Raw]
+  - [Vault Client](#vault-client)
+  - [S3 Client](#S3-client)
+  - [PostgreSQL Client](#PostgreSQL-client)
+  - Iron Raw
+  - [Iron Client](#Iron-client)
 
 # usage
 Import the packages in your app, this will register all the supported connectors and you can proceed to detect the services you need:
@@ -221,15 +222,44 @@ func main() {
 }
 ```
 
+# Iron client
+```golang
+package main
+
+import (
+        "fmt"
+
+        "github.com/cloudfoundry-community/gautocloud"
+        "github.com/philips-software/gautocloud-connectors/hsdp"
+        "github.com/philips-software/go-hsdp-api/iron"
+)
+
+func main() {
+        var client *hsdp.IronClient
+        err := gautocloud.Inject(&client)
+        if err != nil {
+                fmt.Printf("error finding IRON client: %v\n", err)
+                return
+        }
+        fmt.Printf("Plan: %v\n", client.ClusterInfo[0].ClusterName)
+        tasks, _, err := client.Tasks.GetTasks()
+        if err != nil {
+            fmt.Printf("error getting tasks: %v\n", err)
+            return
+        }
+        for _, task := range tasks {
+            fmt.Printf("%v\n", task)
+        }
+}
+```
 
 # Contact / Getting help
 
-andy.lo-a-foe@philips.com
+- andy.lo-a-foe@philips.com
 
-# Application examples
-
-Coming soon..
+# Application using gautocloud
+- [s3dl](https://github.com/philips-labs/s3dl)
+- [rsdl](https://github.com/philips-labs/rsdl)
 
 # License
-
 License is [MIT](LICENSE.md)
