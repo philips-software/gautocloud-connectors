@@ -231,7 +231,6 @@ import (
 
         "github.com/cloudfoundry-community/gautocloud"
         "github.com/philips-software/gautocloud-connectors/hsdp"
-        "github.com/philips-software/go-hsdp-api/iron"
 )
 
 func main() {
@@ -247,7 +246,7 @@ func main() {
             fmt.Printf("error getting tasks: %v\n", err)
             return
         }
-        for _, task := range tasks {
+        for _, task := range *tasks {
             fmt.Printf("%v\n", task)
         }
 }
