@@ -1,28 +1,17 @@
 package hsdp
 
 import (
+	"fmt"
 	"github.com/cloudfoundry-community/gautocloud"
 	"github.com/cloudfoundry-community/gautocloud/connectors"
+	"github.com/philips-software/go-hsdp-api/iron"
 )
 
 func init() {
 	gautocloud.RegisterConnector(NewIronRawConnector())
 }
 
-type IronSchema struct {
-	ClusterInfo []struct {
-		ClusterID   string `cloud:"cluster_id"`
-		ClusterName string `cloud:"cluster_name"`
-		Pubkey      string `cloud:"pubkey"`
-		UserID      string `cloud:"user_id"`
-	} `cloud:"cluster_info"`
-	Email     string `cloud:"email"`
-	Password  string `cloud:"password"`
-	Project   string `cloud:"project"`
-	ProjectID string `cloud:"project_id"`
-	Token     string `cloud:"token"`
-	UserID    string `cloud:"user_id"`
-}
+type IronPlan iron.Config
 
 type IronRawConnector struct{}
 
@@ -39,12 +28,18 @@ func (i IronRawConnector) Tags() []string {
 }
 
 func (i IronRawConnector) Load(schema interface{}) (interface{}, error) {
-	fSchema := schema.(IronSchema)
-	return fSchema, nil
+	fSchema, ok := schema.(iron.Config)
+	if !ok {
+		return nil, fmt.Errorf("no iron.Config detected")
+	}
+	if fSchema.ProjectID == "" {
+		return nil, fmt.Errorf("invalid Iron schema. Missing ProjectID")
+	}
+	return IronPlan(fSchema), nil
 }
 
 func (i IronRawConnector) Schema() interface{} {
-	return IronSchema{}
+	return iron.Config{}
 }
 
 func NewIronRawConnector() connectors.Connector {
