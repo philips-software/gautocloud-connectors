@@ -223,6 +223,8 @@ func main() {
 ```
 
 # Iron client
+Returns an initalized wrapped *iron.Client from [go-hsdp-api/iron](https://github.com/philips-software/go-hsdp-api/tree/master/iron). 
+
 ```golang
 package main
 
