@@ -272,7 +272,7 @@ func main() {
 	var client *hsdp.CartelClient
 	err := gautocloud.Inject(&client)
 	if err != nil {
-		fmt.Printf("error finding IRON client: %v\n", err)
+		fmt.Printf("error finding Cartel client: %v\n", err)
 		return
 	}
 	instances, _, err := client.GetAllInstances()
