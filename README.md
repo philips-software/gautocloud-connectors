@@ -13,6 +13,8 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - [PostgreSQL Client](#PostgreSQL-client)
   - Iron Raw
   - [Iron Client](#Iron-client)
+  - Cartel Raw
+  - [Cartel Client](#Cartel-client)
 
 # usage
 Import the packages in your app, this will register all the supported connectors and you can proceed to detect the services you need:
@@ -192,7 +194,7 @@ func main() {
 }
 ```
 
-# PostgreSQL client
+## PostgreSQL client
 Returns an initialized wrapped *sql.DB connection to our PostgreSQL database
 
 ```go
@@ -222,7 +224,7 @@ func main() {
 }
 ```
 
-# Iron client
+## Iron client
 Returns an initalized wrapped *iron.Client from [go-hsdp-api/iron](https://github.com/philips-software/go-hsdp-api/tree/master/iron). 
 
 ```golang
@@ -253,6 +255,37 @@ func main() {
         }
 }
 ```
+
+## Cartel client
+Returns an initalized wrapped *cartel.Client [go-hsdp-api/iron](https://github.com/philips-software/go-hsdp-api/tree/master/cartel).
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/cloudfoundry-community/gautocloud"
+	"github.com/philips-software/gautocloud-connectors/hsdp"
+)
+
+func main() {
+	var client *hsdp.CartelClient
+	err := gautocloud.Inject(&client)
+	if err != nil {
+		fmt.Printf("error finding IRON client: %v\n", err)
+		return
+	}
+	instances, _, err := client.GetAllInstances()
+	if err != nil {
+		fmt.Printf("error finding intances: %v\n", err)
+		return
+	}
+	for _, instance := range *instances {
+		fmt.Printf("%s\n", instance.InstanceID)
+	}
+}
+```
+
 
 # Contact / Getting help
 

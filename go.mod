@@ -29,7 +29,7 @@ require (
 	github.com/onsi/ginkgo v1.6.0
 	github.com/onsi/gomega v1.4.2
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7 // indirect
-	github.com/philips-software/go-hsdp-api v0.18.0
+	github.com/philips-software/go-hsdp-api v0.18.1-0.20200629053759-a5ee8b12c6aa
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/sirupsen/logrus v1.1.1 // indirect
 	github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d // indirect
