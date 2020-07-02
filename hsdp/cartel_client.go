@@ -38,7 +38,7 @@ func (c CartelClientConnector) Load(schema interface{}) (interface{}, error) {
 	}
 	fSchema := schema.(CartelConfig)
 	config := cartel.Config(fSchema)
-	client, err := cartel.NewClient(nil, config)
+	client, err := cartel.NewClient(nil, &config)
 	if err != nil {
 		return nil, err
 	}
