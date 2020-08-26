@@ -10,6 +10,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - [Redshift](#redshift)
   - [Vault Client](#vault-client)
   - [S3 Client](#S3-client)
+  - [S3 Minio Client](#S3-minio-client)
   - [PostgreSQL Client](#PostgreSQL-client)
   - Iron Raw
   - [Iron Client](#Iron-client)
@@ -191,6 +192,42 @@ func main() {
 	str, err := req.Presign(15 * time.Minute)
 
 	fmt.Println("The URL is:", str, " err:", err)
+}
+```
+## S3 Minio client
+Returns an S3MinioClient instance which uses the Minio S3 Go client. This
+client is generally more friendly in use and also works on Minio servers (e.g. HSoP). Preferred over the S3 Client.
+
+```go
+package main
+
+import (
+	"github.com/cloudfoundry-community/gautocloud"
+	"github.com/philips-software/gautocloud-connectors/hsdp"
+)
+
+func main() {
+	var svc *hsdp.S3MinioClient
+
+	err := gautocloud.Inject(&svc)
+
+	if err != nil {
+		fmt.Printf("%v\n", err)
+		return
+	}
+
+        // Upload a zip file
+	objectName := "golden-oldies.zip"
+	filePath := "/tmp/golden-oldies.zip"
+	contentType := "application/zip"
+
+	// Upload the zip file with FPutObject
+	n, err := minioClient.FPutObject(ctx, bucketName, objectName, filePath, minio.PutObjectOptions{ContentType: contentType})
+	if err != nil {
+		fmt.Printf("%v\n", err)
+                return
+	}
+        fmt.Printf("Success\n")  
 }
 ```
 
