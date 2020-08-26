@@ -8,7 +8,7 @@ import (
 )
 
 func init() {
-	gautocloud.RegisterConnector(NewS3ClientConnector())
+	gautocloud.RegisterConnector(NewS3MinioClientConnector())
 }
 
 type S3MinioClientConnector struct {
@@ -21,7 +21,7 @@ type S3MinioClient struct {
 }
 
 func (v S3MinioClientConnector) Id() string {
-	return "hsdp:s3-client"
+	return "hsdp:s3-minio-client"
 }
 
 func (v S3MinioClientConnector) Name() string {
