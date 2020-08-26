@@ -44,6 +44,9 @@ func (v S3MinioClientConnector) Load(schema interface{}) (interface{}, error) {
 		Creds:  credentials.NewStaticV4(fSchema.APIKey, fSchema.SecretKey, ""),
 		Secure: true,
 	})
+	if err != nil {
+		return nil, err
+	}
 	S3MinioClient := &S3MinioClient{
 		Client:        minioClient,
 		S3Credentials: fSchema,
