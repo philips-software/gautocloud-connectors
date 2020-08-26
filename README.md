@@ -227,7 +227,7 @@ func main() {
 		fmt.Printf("%v\n", err)
                 return
 	}
-        fmt.Printf("Success\n")  
+        fmt.Printf("Success: %v\n", n)  
 }
 ```
 
