@@ -16,6 +16,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - [Iron Client](#Iron-client)
   - Cartel Raw
   - [Cartel Client](#Cartel-client)
+  - [Kafka Raw](#Kafka-raw)
 
 # usage
 Import the packages in your app, this will register all the supported connectors and you can proceed to detect the services you need:
@@ -321,6 +322,52 @@ func main() {
 		fmt.Printf("%s\n", instance.InstanceID)
 	}
 }
+```
+
+# Kafka raw
+Returns Kafka credentials for use with a Kafka Go client. Example using 
+the [Segment IO Kafka Go](https://github.com/segmentio/kafka-go) client:
+
+```golang
+package main
+
+import (
+	"context"
+	"fmt"
+
+	"github.com/cloudfoundry-community/gautocloud"
+	"github.com/philips-software/gautocloud-connectors/hsdp"
+	"github.com/segmentio/kafka-go"
+)
+
+func main() {
+	var creds hsdp.KafkaCredentials
+	err := gautocloud.Inject(&creds)
+	if err != nil {
+		fmt.Printf("error finding Kafka service: %v\n", err)
+		return
+	}
+
+	// make a new reader that consumes from topic-A, partition 0, at offset 42
+	r := kafka.NewReader(kafka.ReaderConfig{
+		Brokers:   creds.Hostnames,
+		Topic:     "topic-A",
+		Partition: 0,
+		MinBytes:  10e3, // 10KB
+		MaxBytes:  10e6, // 10MB
+	})
+	r.SetOffset(0)
+
+	for {
+		m, err := r.ReadMessage(context.Background())
+		if err != nil {
+			break
+		}
+		fmt.Printf("message at offset %d: %s = %s\n", m.Offset, string(m.Key), string(m.Value))
+	}
+	r.Close()
+}
+
 ```
 
 
