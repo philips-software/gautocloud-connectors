@@ -386,7 +386,7 @@ import (
 )
 
 func main() {
-        var es7 hsdp.Elastic7Client
+        var es7 *hsdp.Elastic7Client
         err := gautocloud.Inject(&es7)
         if err != nil {
                 fmt.Printf("error finding ES7 service: %v\n", err)
