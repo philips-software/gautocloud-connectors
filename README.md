@@ -17,6 +17,8 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - Cartel Raw
   - [Cartel Client](#Cartel-client)
   - [Kafka Raw](#Kafka-raw)
+  - Elastic Raw
+  - [Elastic Client](#Elastic-client)
 
 # usage
 Import the packages in your app, this will register all the supported connectors and you can proceed to detect the services you need:
@@ -370,6 +372,30 @@ func main() {
 
 ```
 
+# Elastic client
+Supports elasticsearch6 and elasticsearch7 clients via the offical Elastic Go client
+
+```go
+package main
+
+import (
+        "log"
+
+        "github.com/cloudfoundry-community/gautocloud"
+        "github.com/philips-software/gautocloud-connectors/hsdp"
+)
+
+func main() {
+        var es7 *hsdp.Elastic7Client
+        err := gautocloud.Inject(&es7)
+        if err != nil {
+                fmt.Printf("error finding ES7 service: %v\n", err)
+                return
+        }
+
+        log.Println(es7.Info())
+}
+```
 
 # Contact / Getting help
 
