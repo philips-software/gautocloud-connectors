@@ -1,6 +1,6 @@
 module github.com/philips-software/gautocloud-connectors
 
-go 1.14
+go 1.16
 
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
