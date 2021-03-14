@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
-	github.com/aws/aws-sdk-go v1.31.6
+	github.com/aws/aws-sdk-go v1.37.30
 	github.com/azer/snakecase v1.0.0 // indirect
 	github.com/cenkalti/backoff v2.0.0+incompatible // indirect
 	github.com/clbanning/x2j v0.0.0-20180326210544-5e605d46809c // indirect
@@ -17,13 +17,13 @@ require (
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/gopherjs/gopherjs v0.0.0-20181103185306-d547d1d9531e // indirect
 	github.com/hashicorp/vault/api v1.0.4
-	github.com/hudl/fargo v1.2.0
+	github.com/hudl/fargo v1.3.0
 	github.com/inconshreveable/log15 v0.0.0-20180818164646-67afb5ed74ec // indirect
 	github.com/kevinburke/go-types v0.0.0-20180804230501-141e48b46866 // indirect
 	github.com/kevinburke/go.uuid v1.2.0 // indirect
 	github.com/kevinburke/rest v0.0.0-20180424040019-54a8b1109595 // indirect
 	github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91
-	github.com/lib/pq v1.3.0
+	github.com/lib/pq v1.10.0
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
 	github.com/mattn/go-isatty v0.0.4 // indirect
 	github.com/miekg/dns v1.0.15 // indirect
