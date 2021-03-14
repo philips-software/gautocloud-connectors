@@ -17,7 +17,7 @@ require (
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/gopherjs/gopherjs v0.0.0-20181103185306-d547d1d9531e // indirect
 	github.com/hashicorp/vault/api v1.0.4
-	github.com/hudl/fargo v1.2.0
+	github.com/hudl/fargo v1.3.0
 	github.com/inconshreveable/log15 v0.0.0-20180818164646-67afb5ed74ec // indirect
 	github.com/kevinburke/go-types v0.0.0-20180804230501-141e48b46866 // indirect
 	github.com/kevinburke/go.uuid v1.2.0 // indirect
