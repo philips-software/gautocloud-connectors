@@ -28,8 +28,8 @@ require (
 	github.com/mattn/go-isatty v0.0.4 // indirect
 	github.com/miekg/dns v1.0.15 // indirect
 	github.com/minio/minio-go/v7 v7.0.5
-	github.com/onsi/ginkgo v1.6.0
-	github.com/onsi/gomega v1.4.2
+	github.com/onsi/ginkgo v1.15.1
+	github.com/onsi/gomega v1.10.1
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7 // indirect
 	github.com/philips-software/go-hsdp-api v0.20.0
 	github.com/satori/go.uuid v1.2.0 // indirect
