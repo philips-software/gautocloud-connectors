@@ -25,16 +25,12 @@ require (
 	github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91
 	github.com/lib/pq v1.10.0
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
-	github.com/mattn/go-isatty v0.0.4 // indirect
-	github.com/miekg/dns v1.0.15 // indirect
 	github.com/minio/minio-go/v7 v7.0.5
 	github.com/onsi/ginkgo v1.15.1
 	github.com/onsi/gomega v1.10.1
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7 // indirect
-	github.com/philips-software/go-hsdp-api v0.20.0
+	github.com/philips-software/go-hsdp-api v0.36.1
 	github.com/satori/go.uuid v1.2.0 // indirect
-	github.com/sirupsen/logrus v1.1.1 // indirect
-	github.com/spf13/viper v1.2.1 // indirect
 	github.com/stretchr/testify v1.7.0
 	github.com/ttacon/builder v0.0.0-20170518171403-c099f663e1c2 // indirect
 	github.com/ttacon/libphonenumber v1.0.0 // indirect
