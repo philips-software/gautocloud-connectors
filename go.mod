@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
-	github.com/aws/aws-sdk-go v1.38.8
+	github.com/aws/aws-sdk-go v1.38.9
 	github.com/azer/snakecase v1.0.0 // indirect
 	github.com/cenkalti/backoff v2.0.0+incompatible // indirect
 	github.com/clbanning/x2j v0.0.0-20180326210544-5e605d46809c // indirect
