@@ -14,7 +14,7 @@ require (
 	github.com/elastic/go-elasticsearch/v7 v7.9.0
 	github.com/franela/goblin v0.0.0-20181003173013-ead4ad1d2727 // indirect
 	github.com/franela/goreq v0.0.0-20171204163338-bcd34c9993f8 // indirect
-	github.com/hashicorp/vault/api v1.0.4
+	github.com/hashicorp/vault/api v1.1.0
 	github.com/hudl/fargo v1.3.0
 	github.com/inconshreveable/log15 v0.0.0-20180818164646-67afb5ed74ec // indirect
 	github.com/kevinburke/go-types v0.0.0-20180804230501-141e48b46866 // indirect
