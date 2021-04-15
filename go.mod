@@ -27,7 +27,7 @@ require (
 	github.com/onsi/ginkgo v1.16.1
 	github.com/onsi/gomega v1.11.0
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7 // indirect
-	github.com/philips-software/go-hsdp-api v0.37.0
+	github.com/philips-software/go-hsdp-api v0.37.1
 	github.com/stretchr/testify v1.7.0
 	github.com/ttacon/builder v0.0.0-20170518171403-c099f663e1c2 // indirect
 	github.com/ttacon/libphonenumber v1.0.0 // indirect
