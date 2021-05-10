@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
-	github.com/aws/aws-sdk-go v1.38.25
+	github.com/aws/aws-sdk-go v1.38.36
 	github.com/azer/snakecase v1.0.0 // indirect
 	github.com/cenkalti/backoff v2.0.0+incompatible // indirect
 	github.com/clbanning/x2j v0.0.0-20180326210544-5e605d46809c // indirect
@@ -25,9 +25,9 @@ require (
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
 	github.com/minio/minio-go/v7 v7.0.10
 	github.com/onsi/ginkgo v1.16.2
-	github.com/onsi/gomega v1.11.0
+	github.com/onsi/gomega v1.12.0
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7 // indirect
-	github.com/philips-software/go-hsdp-api v0.38.0
+	github.com/philips-software/go-hsdp-api v0.38.1
 	github.com/stretchr/testify v1.7.0
 	github.com/ttacon/builder v0.0.0-20170518171403-c099f663e1c2 // indirect
 	github.com/ttacon/libphonenumber v1.0.0 // indirect
