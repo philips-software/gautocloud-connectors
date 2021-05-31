@@ -24,7 +24,7 @@ require (
 	github.com/lib/pq v1.10.2
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
 	github.com/minio/minio-go/v7 v7.0.10
-	github.com/onsi/ginkgo v1.16.2
+	github.com/onsi/ginkgo v1.16.3
 	github.com/onsi/gomega v1.12.0
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7 // indirect
 	github.com/philips-software/go-hsdp-api v0.39.1
