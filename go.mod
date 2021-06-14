@@ -23,7 +23,7 @@ require (
 	github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91
 	github.com/lib/pq v1.10.2
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
-	github.com/minio/minio-go/v7 v7.0.10
+	github.com/minio/minio-go/v7 v7.0.11
 	github.com/onsi/ginkgo v1.16.4
 	github.com/onsi/gomega v1.13.0
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7 // indirect
