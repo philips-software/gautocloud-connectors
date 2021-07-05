@@ -17,6 +17,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - Cartel Raw
   - [Cartel Client](#Cartel-client)
   - [Kafka Raw](#Kafka-raw)
+  - [Kafia Dialer](#Kafka-dialer)  
   - Elastic Raw
   - [Elastic Client](#Elastic-client)
 
@@ -369,10 +370,43 @@ func main() {
 	}
 	r.Close()
 }
+```
+
+## Kafka Dialer
+Returns Kafka dialer for use with a Kafka Go client. Example using
+the [Segment IO Kafka Go](https://github.com/segmentio/kafka-go) client:
+
+```golang
+package main
+
+import (
+	"fmt"
+
+	"github.com/cloudfoundry-community/gautocloud"
+	"github.com/philips-software/gautocloud-connectors/hsdp"
+)
+
+func main() {
+	var dialer hsdp.KafkaDialer
+	err := gautocloud.Inject(&dialer)
+	if err != nil {
+		fmt.Printf("error finding Kafka service: %v\n", err)
+		return
+	}
+	conn, err := dialer.Dial("tcp", dialer.URI)
+	if err != nil {
+		fmt.Printf("failed to dial leader: %v\n", err)
+		return
+	}
+	defer conn.Close()
+
+	// Use conn...
+}
 
 ```
 
-# Elastic client
+
+## Elastic client
 Supports elasticsearch6 and elasticsearch7 clients via the offical Elastic Go client
 
 ```go
