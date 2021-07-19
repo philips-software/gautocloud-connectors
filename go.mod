@@ -10,7 +10,7 @@ require (
 	github.com/cloudfoundry-community/go-cfenv v1.17.0 // indirect
 	github.com/elastic/go-elasticsearch/v6 v6.8.10
 	github.com/elastic/go-elasticsearch/v7 v7.9.0
-	github.com/hashicorp/vault/api v1.1.0
+	github.com/hashicorp/vault/api v1.1.1
 	github.com/hudl/fargo v1.4.0
 	github.com/inconshreveable/log15 v0.0.0-20180818164646-67afb5ed74ec // indirect
 	github.com/kevinburke/go-types v0.0.0-20180804230501-141e48b46866 // indirect
