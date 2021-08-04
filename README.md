@@ -243,8 +243,8 @@ package main
 
 import (
     "fmt"
-	"github.com/cloudfoundry-community/gautocloud"
-	"github.com/philips-software/gautocloud-connectors/hsdp"
+    "github.com/cloudfoundry-community/gautocloud"
+    "github.com/philips-software/gautocloud-connectors/hsdp"
 )
 
 func main() {
