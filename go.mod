@@ -8,8 +8,6 @@ require (
 	github.com/azer/snakecase v1.0.0 // indirect
 	github.com/cloudfoundry-community/gautocloud v0.0.0-20180705161326-087edaf8ef16
 	github.com/cloudfoundry-community/go-cfenv v1.17.0 // indirect
-	github.com/elastic/go-elasticsearch/v6 v6.8.10
-	github.com/elastic/go-elasticsearch/v7 v7.9.0
 	github.com/hashicorp/vault/api v1.1.1
 	github.com/hudl/fargo v1.4.0
 	github.com/inconshreveable/log15 v0.0.0-20180818164646-67afb5ed74ec // indirect
@@ -21,8 +19,8 @@ require (
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
 	github.com/minio/minio-go/v7 v7.0.12
 	github.com/onsi/ginkgo v1.16.4
-	github.com/philips-software/go-hsdp-api v0.42.3
 	github.com/onsi/gomega v1.15.0
+	github.com/philips-software/go-hsdp-api v0.42.3
 	github.com/segmentio/kafka-go v0.4.17
 	github.com/stretchr/testify v1.7.0
 	github.com/ttacon/builder v0.0.0-20170518171403-c099f663e1c2 // indirect
