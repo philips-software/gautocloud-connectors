@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
-	github.com/aws/aws-sdk-go v1.40.37
+	github.com/aws/aws-sdk-go v1.40.41
 	github.com/azer/snakecase v1.0.0 // indirect
 	github.com/cloudfoundry-community/gautocloud v0.0.0-20180705161326-087edaf8ef16
 	github.com/cloudfoundry-community/go-cfenv v1.17.0 // indirect
