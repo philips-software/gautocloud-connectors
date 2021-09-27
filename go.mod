@@ -20,7 +20,7 @@ require (
 	github.com/minio/minio-go/v7 v7.0.14
 	github.com/onsi/ginkgo v1.16.4
 	github.com/onsi/gomega v1.16.0
-	github.com/philips-software/go-hsdp-api v0.43.0
+	github.com/philips-software/go-hsdp-api v0.44.0
 	github.com/segmentio/kafka-go v0.4.20
 	github.com/stretchr/testify v1.7.0
 	github.com/ttacon/builder v0.0.0-20170518171403-c099f663e1c2 // indirect
