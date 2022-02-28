@@ -8,7 +8,7 @@ require (
 	github.com/azer/snakecase v1.0.0 // indirect
 	github.com/cloudfoundry-community/gautocloud v0.0.0-20180705161326-087edaf8ef16
 	github.com/cloudfoundry-community/go-cfenv v1.17.0 // indirect
-	github.com/hashicorp/vault/api v1.3.1
+	github.com/hashicorp/vault/api v1.4.1
 	github.com/hudl/fargo v1.4.0
 	github.com/inconshreveable/log15 v0.0.0-20180818164646-67afb5ed74ec // indirect
 	github.com/kevinburke/go-types v0.0.0-20180804230501-141e48b46866 // indirect
