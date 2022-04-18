@@ -20,7 +20,7 @@ require (
 	github.com/minio/minio-go/v7 v7.0.23
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.19.0
-	github.com/philips-software/go-hsdp-api v0.62.0
+	github.com/philips-software/go-hsdp-api v0.63.0
 	github.com/pierrec/lz4 v2.6.0+incompatible // indirect
 	github.com/segmentio/kafka-go v0.4.31
 	github.com/stretchr/testify v1.7.1
