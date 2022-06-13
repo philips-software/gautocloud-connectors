@@ -23,7 +23,7 @@ require (
 	github.com/philips-software/go-hsdp-api v0.70.2
 	github.com/pierrec/lz4 v2.6.0+incompatible // indirect
 	github.com/segmentio/kafka-go v0.4.32
-	github.com/stretchr/testify v1.7.1
+	github.com/stretchr/testify v1.7.2
 	github.com/ttacon/builder v0.0.0-20170518171403-c099f663e1c2 // indirect
 	github.com/ttacon/libphonenumber v1.0.0 // indirect
 	gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce // indirect
