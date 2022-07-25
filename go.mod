@@ -17,7 +17,7 @@ require (
 	github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91
 	github.com/lib/pq v1.10.6
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
-	github.com/minio/minio-go/v7 v7.0.31
+	github.com/minio/minio-go/v7 v7.0.32
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.20.0
 	github.com/philips-software/go-hsdp-api v0.71.2
