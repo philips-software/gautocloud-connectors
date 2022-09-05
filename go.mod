@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
-	github.com/aws/aws-sdk-go v1.44.86
+	github.com/aws/aws-sdk-go v1.44.91
 	github.com/azer/snakecase v1.0.0 // indirect
 	github.com/cloudfoundry-community/gautocloud v0.0.0-20180705161326-087edaf8ef16
 	github.com/cloudfoundry-community/go-cfenv v1.17.0 // indirect
@@ -18,9 +18,9 @@ require (
 	github.com/klauspost/cpuid v1.3.1 // indirect
 	github.com/lib/pq v1.10.6
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
-	github.com/minio/minio-go/v7 v7.0.34
+	github.com/minio/minio-go/v7 v7.0.35
 	github.com/onsi/ginkgo v1.16.5
-	github.com/onsi/gomega v1.20.1
+	github.com/onsi/gomega v1.20.2
 	github.com/philips-software/go-hsdp-api v0.73.0
 	github.com/pierrec/lz4 v2.6.0+incompatible // indirect
 	github.com/segmentio/kafka-go v0.4.34
