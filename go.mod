@@ -16,7 +16,7 @@ require (
 	github.com/kevinburke/rest v0.0.0-20180424040019-54a8b1109595 // indirect
 	github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91
 	github.com/klauspost/cpuid v1.3.1 // indirect
-	github.com/lib/pq v1.10.6
+	github.com/lib/pq v1.10.7
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
 	github.com/minio/minio-go/v7 v7.0.36
 	github.com/onsi/ginkgo v1.16.5
