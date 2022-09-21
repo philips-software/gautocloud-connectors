@@ -1,13 +1,15 @@
 # gautocloud
+
 Gautocloud provides a simple abstraction that golang based applications can use to discover information about the cloud environment on which they are running, to connect to services automatically with ease of use in mind. It provides out-of-the-box support for discovering common services on Heroku, Cloud Foundry and kubernetes cloud platforms, and it supports custom automatic connectors. For more details see the [gautocloud project](https://github.com/cloudfoundry-community/gautocloud)
 
-# gautocloud connectors for HSDP services
+## gautocloud connectors for HSDP services
 This repository contains [gautocloud connectors](https://github.com/cloudfoundry-community/gautocloud) for select [HSDP](https://www.hsdp.io) Cloud foundry services. At this time the following connectors are supported:
 
   - [Twilio Raw](#twilio-raw)
   - [Twilio Client](#twilio-go-client)
   - [DynamoDB Client](#dynamodb-client)
   - [Redshift](#redshift)
+  - [Redis DB](#redis)
   - [Vault Client](#vault-client)
   - [S3 Client](#S3-client)
   - [S3 Minio Client](#S3-minio-client)
@@ -19,7 +21,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - [Kafka Raw](#Kafka-raw)
   - [Kafka Dialer](#Kafka-dialer)  
 
-# usage
+## usage
 Import the packages in your app, this will register all the supported connectors and you can proceed to detect the services you need:
 
 ```go
@@ -135,6 +137,11 @@ import (
 		fmt.Printf("%v\n", col)
 	}
 ```
+
+## Redis Sentinel
+
+
+
 
 ## Vault client
 Returns a VaultClient instance which is composed of the official Hashicorp Go Vault client and a VaultCredentials struct containing all the fields found in the service broker
