@@ -45,7 +45,7 @@ func (r RedisConnector) Load(schema interface{}) (interface{}, error) {
 
 	rdb := redis.NewFailoverClusterClient(&redis.FailoverOptions{
 		MasterName:       fSchema.MasterName,
-		SentinelAddrs:    []string{fmt.Sprintf("%s:%s", fSchema.Hostname, fSchema.SentinelPort)},
+		SentinelAddrs:    []string{fmt.Sprintf("%s:%d", fSchema.Hostname, fSchema.SentinelPort)},
 		SentinelPassword: fSchema.Password,
 		Password:         fSchema.Password,
 		//RouteByLatency: true,
