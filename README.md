@@ -140,10 +140,39 @@ import (
 
 ## Redis Sentinel
 
+Returns a [redis.ClusterClient](https://redis.uptrace.dev/guide/go-redis-cluster.html) ready for use
 
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+
+	"github.com/cloudfoundry-community/gautocloud"
+	"github.com/go-redis/redis/v8"
+	_ "github.com/philips-software/gautocloud-connectors/hsdp"
+)
+
+func main() {
+	var client *redis.ClusterClient
+
+	err := gautocloud.InjectFromId("hsdp:redis-db", &client)
+
+	if err != nil {
+		fmt.Printf("Cannot find bound hsdp-redis-db instance\n")
+		os.Exit(1)
+	}
+
+	res := client.Keys(context.Background(), "*")
+	fmt.Printf("Keys: %+v\n", res)
+}
+```
 
 
 ## Vault client
+
 Returns a VaultClient instance which is composed of the official Hashicorp Go Vault client and a VaultCredentials struct containing all the fields found in the service broker
 
 ```go
