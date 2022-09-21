@@ -9,7 +9,7 @@ This repository contains [gautocloud connectors](https://github.com/cloudfoundry
   - [Twilio Client](#twilio-go-client)
   - [DynamoDB Client](#dynamodb-client)
   - [Redshift](#redshift)
-  - [Redis DB](#redis)
+  - [Redis Sentinel](#redis-sentinel)
   - [Vault Client](#vault-client)
   - [S3 Client](#S3-client)
   - [S3 Minio Client](#S3-minio-client)
