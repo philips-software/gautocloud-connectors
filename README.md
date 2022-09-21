@@ -164,7 +164,11 @@ func main() {
 		fmt.Printf("Cannot find bound hsdp-redis-db instance\n")
 		os.Exit(1)
 	}
+	
+	// Write a key
+	client.Set(context.Background(), "hello", "world", 24*time.Hour)
 
+	// List it
 	res := client.Keys(context.Background(), "*")
 	fmt.Printf("Keys: %+v\n", res)
 }
