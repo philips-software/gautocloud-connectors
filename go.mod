@@ -19,7 +19,7 @@ require (
 	github.com/klauspost/cpuid v1.3.1 // indirect
 	github.com/lib/pq v1.10.7
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
-	github.com/minio/minio-go/v7 v7.0.40
+	github.com/minio/minio-go/v7 v7.0.41
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.21.1
 	github.com/philips-software/go-hsdp-api v0.74.2
