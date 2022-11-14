@@ -24,7 +24,7 @@ require (
 	github.com/onsi/gomega v1.24.0
 	github.com/philips-software/go-hsdp-api v0.75.5
 	github.com/pierrec/lz4 v2.6.0+incompatible // indirect
-	github.com/segmentio/kafka-go v0.4.36
+	github.com/segmentio/kafka-go v0.4.38
 	github.com/stretchr/testify v1.8.1
 	github.com/ttacon/builder v0.0.0-20170518171403-c099f663e1c2 // indirect
 	github.com/ttacon/libphonenumber v1.0.0 // indirect
