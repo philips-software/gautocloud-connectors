@@ -5,9 +5,7 @@ go 1.16
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
 	github.com/aws/aws-sdk-go v1.44.209
-	github.com/azer/snakecase v1.0.0 // indirect
-	github.com/cloudfoundry-community/gautocloud v0.0.0-20180705161326-087edaf8ef16
-	github.com/cloudfoundry-community/go-cfenv v1.17.0 // indirect
+	github.com/cloudfoundry-community/gautocloud v1.2.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/hashicorp/vault/api v1.9.0
 	github.com/hudl/fargo v1.4.0
@@ -27,5 +25,4 @@ require (
 	github.com/stretchr/testify v1.8.1
 	github.com/ttacon/builder v0.0.0-20170518171403-c099f663e1c2 // indirect
 	github.com/ttacon/libphonenumber v1.0.0 // indirect
-	gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce // indirect
 )
