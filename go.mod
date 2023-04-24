@@ -7,7 +7,7 @@ require (
 	github.com/aws/aws-sdk-go v1.44.224
 	github.com/cloudfoundry-community/gautocloud v1.2.0
 	github.com/go-redis/redis/v8 v8.11.5
-	github.com/hashicorp/vault/api v1.9.0
+	github.com/hashicorp/vault/api v1.9.1
 	github.com/hudl/fargo v1.4.0
 	github.com/inconshreveable/log15 v0.0.0-20180818164646-67afb5ed74ec // indirect
 	github.com/kevinburke/go-types v0.0.0-20180804230501-141e48b46866 // indirect
