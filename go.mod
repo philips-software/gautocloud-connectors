@@ -5,7 +5,7 @@ go 1.16
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
 	github.com/aws/aws-sdk-go v1.44.258
-	github.com/cloudfoundry-community/gautocloud v1.2.0
+	github.com/cloudfoundry-community/gautocloud v1.3.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/hashicorp/vault/api v1.9.1
 	github.com/hudl/fargo v1.4.0
@@ -20,6 +20,7 @@ require (
 	github.com/minio/minio-go/v7 v7.0.52
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.27.6
+	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/philips-software/go-hsdp-api v0.80.1
 	github.com/segmentio/kafka-go v0.4.39
 	github.com/stretchr/testify v1.8.2
