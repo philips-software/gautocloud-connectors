@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/ArthurHlt/gominlog v0.0.0-20170402142412-72eebf980f46 // indirect
-	github.com/aws/aws-sdk-go v1.44.271
+	github.com/aws/aws-sdk-go v1.44.298
 	github.com/cloudfoundry-community/gautocloud v1.3.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/hashicorp/vault/api v1.9.1
