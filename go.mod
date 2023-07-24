@@ -19,7 +19,7 @@ require (
 	github.com/loafoe/go-eureka-client v0.0.0-20181122150342-305e9cc4dc71
 	github.com/minio/minio-go/v7 v7.0.55
 	github.com/onsi/ginkgo v1.16.5
-	github.com/onsi/gomega v1.27.7
+	github.com/onsi/gomega v1.27.9
 	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/philips-software/go-hsdp-api v0.81.0
 	github.com/segmentio/kafka-go v0.4.40
