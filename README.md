@@ -2,6 +2,10 @@
 
 Gautocloud provides a simple abstraction that golang based applications can use to discover information about the cloud environment on which they are running, to connect to services automatically with ease of use in mind. It provides out-of-the-box support for discovering common services on Heroku, Cloud Foundry and kubernetes cloud platforms, and it supports custom automatic connectors. For more details see the [gautocloud project](https://github.com/cloudfoundry-community/gautocloud)
 
+# disclaimer
+
+I&S Cloud Operations is not responsible and does not support usage of this repository. This is a Philips Open Source project and any support is provided through this Github project only. Please do not raise SNOW tickets related to any usage of the software hosted here.
+
 ## gautocloud connectors for HSDP services
 This repository contains [gautocloud connectors](https://github.com/cloudfoundry-community/gautocloud) for select [HSDP](https://www.hsdp.io) Cloud foundry services. At this time the following connectors are supported:
 
