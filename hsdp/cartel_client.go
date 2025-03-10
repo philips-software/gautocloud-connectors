@@ -3,7 +3,7 @@ package hsdp
 import (
 	"github.com/cloudfoundry-community/gautocloud"
 	"github.com/cloudfoundry-community/gautocloud/connectors"
-	"github.com/philips-software/go-hsdp-api/cartel"
+	"github.com/dip-software/go-dip-api/cartel"
 )
 
 func init() {
