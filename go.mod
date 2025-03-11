@@ -9,7 +9,7 @@ require (
 	github.com/cloudfoundry-community/gautocloud v1.3.0
 	github.com/dip-software/go-dip-api v0.91.0
 	github.com/go-redis/redis/v8 v8.11.5
-	github.com/hashicorp/vault/api v1.15.0
+	github.com/hashicorp/vault/api v1.16.0
 	github.com/hudl/fargo v1.4.0
 	github.com/kevinburke/twilio-go v0.0.0-20180929160738-8c4607665b91
 	github.com/lib/pq v1.10.9
