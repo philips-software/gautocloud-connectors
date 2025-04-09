@@ -1,4 +1,4 @@
-# DEPRECATED
+# DEPRECATED: please use https://github.com/dip-software/gautocloud-connectors
 
 # gautocloud
 
